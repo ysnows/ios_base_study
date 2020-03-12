@@ -24,7 +24,7 @@
     }
     
     
-    NSString *urlString=@"https://quansu-webapp.oss-cn-qingdao.aliyuncs.com/test.json";
+    NSString *urlString=@"https://quansu-webapp.oss-cn-qingdao.aliyuncs.com/ios/news.json";
 //    NSString *urlString=@"http://v.juhe.cn/toutiao/index?type=top&key=ddfb2b8ecb24486c0afb8c79ac43f4b9";
     NSURL *url=[NSURL URLWithString:urlString];
 //    NSURLRequest *request=[NSURLRequest requestWithURL:url];

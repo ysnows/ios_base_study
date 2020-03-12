@@ -21,7 +21,6 @@
 @property(nonatomic, strong) IndexListLoader *loader;
 
 
-
 @end
 
 @implementation ViewController

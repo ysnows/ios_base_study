@@ -7,8 +7,17 @@
 //
 
 #import "VideoViewController.h"
+#import "VideoListCell.h"
+#import "VideoListLoader.h"
+#import "MJRefresh.h"
+#import "Video.h"
+
+
 
 @interface VideoViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property(nonatomic, strong) NSArray<Video *> *videoList;
+@property(nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -28,28 +37,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing=10;
     layout.minimumInteritemSpacing=10;
     layout.itemSize=CGSizeMake((self.view.frame.size.width-10)/2, 300);
     
-    UICollectionView *collectionView=[[UICollectionView alloc]initWithFrame:self.view.bounds  collectionViewLayout:layout];
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"id"];
-    collectionView.dataSource=self;
-    collectionView.delegate=self;
+    _collectionView=[[UICollectionView alloc]initWithFrame:self.view.bounds  collectionViewLayout:layout];
 
-    [self.view addSubview:collectionView];
+    [_collectionView registerClass:[VideoListCell class] forCellWithReuseIdentifier:@"id"];
+    _collectionView.dataSource=self;
+    _collectionView.delegate=self;
+
+    _collectionView.backgroundColor=[UIColor whiteColor];
+
+    [self.view addSubview:_collectionView];
+    
+    VideoListLoader *loader =[[VideoListLoader alloc]init];
+    _collectionView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [loader loadVideoListWithCompleted:^(NSArray<Video *> * _Nonnull videoArr) {
+            [self->_collectionView.mj_header endRefreshing];
+            self.videoList=videoArr;
+            [self->_collectionView reloadData];
+        }];
+    }];
+
+    [_collectionView.mj_header beginRefreshing];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+    return [_videoList count];
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    VideoListCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"id" forIndexPath:indexPath];
+    Video *item=[_videoList objectAtIndex:indexPath.row];
+    [cell setVideo:item];
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"id" forIndexPath:indexPath];
-    cell.backgroundColor=[UIColor redColor];
     return cell;
 }
 
@@ -63,20 +88,7 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.item%3==0) {
-        return CGSizeMake(self.view.frame.size.width, 100);
-    }
-        return CGSizeMake((self.view.frame.size.width-10)/2, 300);
+       return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width/16*9);
 }
-/*
-#pragma mark - Navigation
- 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
