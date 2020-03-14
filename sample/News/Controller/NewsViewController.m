@@ -6,15 +6,17 @@
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NewsViewController.h"
 #import "NewsTableViewCell.h"
 #import "DetailViewController.h"
 #import "DeleteDialog.h"
 #import "IndexListLoader.h"
 #import "NewsItem.h"
 #import "MJRefresh.h"
+#import "YUIScreen.h"
 
-@interface ViewController ()<UITableViewDataSource,UITabBarDelegate,NewsTableViewCellDelegate>
+
+@interface NewsViewController ()<UITableViewDataSource,UITabBarDelegate,NewsTableViewCellDelegate>
 
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray<NewsItem *> *dataArr;
@@ -23,7 +25,7 @@
 
 @end
 
-@implementation ViewController
+@implementation NewsViewController
 
 - (instancetype)init
 {
@@ -86,7 +88,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 120;
+    return UI(120);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

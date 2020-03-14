@@ -80,15 +80,17 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-        UIViewController *viewController= [[UIViewController alloc]init];
-        viewController.navigationItem.title=@"内容";
-        viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
-        [self.navigationController pushViewController:viewController animated:YES];
+    
+//        UIViewController *viewController= [[UIViewController alloc]init];
+//        viewController.navigationItem.title=@"内容";
+//        viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
+//        [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-       return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width/16*9);
+    
+       return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width/16*9+60);
 }
 
 @end

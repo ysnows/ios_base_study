@@ -12,7 +12,7 @@
 		2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C20FFC023F64FD0009EF728 /* DeleteDialog.m */; };
 		2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C64D23ED135400D906F5 /* AppDelegate.m */; };
 		2C24C65123ED135400D906F5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65023ED135400D906F5 /* SceneDelegate.m */; };
-		2C24C65423ED135400D906F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* ViewController.m */; };
+		2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* NewsViewController.m */; };
 		2C24C65723ED135400D906F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65523ED135400D906F5 /* Main.storyboard */; };
 		2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65823ED135500D906F5 /* Assets.xcassets */; };
 		2C24C65C23ED135500D906F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65A23ED135500D906F5 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,8 @@
 		2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B838C2419D18D00B5102A /* VideoListLoader.m */; };
 		2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8390241A874600B5102A /* YVideoPlayer.m */; };
 		2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E5AEF2400BA980046D891 /* IndexListLoader.m */; };
+		2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA659241C894A009C6D4C /* VideoToolBar.m */; };
+		2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */; };
 		2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDD04C2404D5A400AF1943 /* NewsItem.m */; };
 		2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F62C2418926D006BEFB2 /* VideoListCell.m */; };
 		2CD1F631241892F9006BEFB2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F630241892F9006BEFB2 /* Video.m */; };
@@ -42,8 +44,8 @@
 		2C24C64D23ED135400D906F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C24C64F23ED135400D906F5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2C24C65023ED135400D906F5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2C24C65223ED135400D906F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C24C65323ED135400D906F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C24C65223ED135400D906F5 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		2C24C65323ED135400D906F5 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		2C24C65623ED135400D906F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C24C65823ED135500D906F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C24C65B23ED135500D906F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,10 @@
 		2C5B8390241A874600B5102A /* YVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YVideoPlayer.m; sourceTree = "<group>"; };
 		2C7E5AEE2400BA980046D891 /* IndexListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexListLoader.h; sourceTree = "<group>"; };
 		2C7E5AEF2400BA980046D891 /* IndexListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexListLoader.m; sourceTree = "<group>"; };
+		2CBDA658241C894A009C6D4C /* VideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBar.h; sourceTree = "<group>"; };
+		2CBDA659241C894A009C6D4C /* VideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolBar.m; sourceTree = "<group>"; };
+		2CBDA65B241D2FEF009C6D4C /* YUIScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUIScreen.h; sourceTree = "<group>"; };
+		2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUIScreen.m; sourceTree = "<group>"; };
 		2CBDD04C2404D5A400AF1943 /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
 		2CBDD04D2404D5A400AF1943 /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
 		2CD1F62B2418926D006BEFB2 /* VideoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		2C1BCA3F23FCE5B100924F3E /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				2CBDA657241C8935009C6D4C /* view */,
 				2CD1F62E241892E9006BEFB2 /* model */,
 				2CD1F62A24189243006BEFB2 /* cell */,
 				2C14E67823ED536F005D992D /* VideoViewController.h */,
@@ -202,6 +209,8 @@
 			children = (
 				2C5B838F241A874600B5102A /* YVideoPlayer.h */,
 				2C5B8390241A874600B5102A /* YVideoPlayer.m */,
+				2CBDA65B241D2FEF009C6D4C /* YUIScreen.h */,
+				2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,11 +224,20 @@
 			path = loader;
 			sourceTree = "<group>";
 		};
+		2CBDA657241C8935009C6D4C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2CBDA658241C894A009C6D4C /* VideoToolBar.h */,
+				2CBDA659241C894A009C6D4C /* VideoToolBar.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		2CBDD0472404D0EF00AF1943 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2C24C65223ED135400D906F5 /* ViewController.h */,
-				2C24C65323ED135400D906F5 /* ViewController.m */,
+				2C24C65223ED135400D906F5 /* NewsViewController.h */,
+				2C24C65323ED135400D906F5 /* NewsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,12 +393,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
-				2C24C65423ED135400D906F5 /* ViewController.m in Sources */,
+				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
 				2CD673A823F1173D000F6ABF /* DetailViewController.m in Sources */,
 				2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */,
 				2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */,
+				2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */,
 				2C24C65F23ED135500D906F5 /* main.m in Sources */,
 				2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */,
+				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
 				2C24C65123ED135400D906F5 /* SceneDelegate.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,
 				2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */,
@@ -533,6 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
 				INFOPLIST_FILE = sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,6 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
 				INFOPLIST_FILE = sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

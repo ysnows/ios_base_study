@@ -6,7 +6,7 @@
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NewsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

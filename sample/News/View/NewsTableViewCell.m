@@ -10,6 +10,7 @@
 
 #import "NewsItem.h"
 #import <SDWebImage/SDWebImage.h>
+#import "YUIScreen.h"
 
 
 
@@ -29,7 +30,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self addSubview:({
-            self.titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(20, 5, 275, 50)];
+            self.titleLabel=[[UILabel alloc]initWithFrame:UIRect(20, 5, 275, 50)];
             self.titleLabel.numberOfLines=2;
             self.titleLabel.lineBreakMode=NSLineBreakByTruncatingTail;
             self.titleLabel.font=[UIFont systemFontOfSize:16];
@@ -40,34 +41,34 @@
         
         [self addSubview:({
             
-            self.sourceLabel=[[UILabel alloc]initWithFrame:CGRectMake(20, 100, 50, 20)];
+            self.sourceLabel=[[UILabel alloc]initWithFrame:UIRect(20, 100, 50, 20)];
             self.sourceLabel.font=[UIFont systemFontOfSize:12];
             self.sourceLabel.textColor=[UIColor grayColor];
             self.sourceLabel;
         })];
 
         [self addSubview:({
-            self.commentLabel=[[UILabel alloc]initWithFrame:CGRectMake(80, 100, 50, 20)];
+            self.commentLabel=[[UILabel alloc]initWithFrame:UIRect(80, 100, 50, 20)];
             self.commentLabel.font=[UIFont systemFontOfSize:12];
             self.commentLabel.textColor=[UIColor grayColor];
             self.commentLabel;
         })];
         
         [self addSubview:({
-            self.timeLabel=[[UILabel alloc]initWithFrame:CGRectMake(140, 100, 50, 20)];
+            self.timeLabel=[[UILabel alloc]initWithFrame:UIRect(140, 100, 50, 20)];
             self.timeLabel.font=[UIFont systemFontOfSize:12];
             self.timeLabel.textColor=[UIColor grayColor];
             self.timeLabel;
         })];
         
         [self addSubview:({
-            self.rightImageView=[[UIImageView alloc]initWithFrame:CGRectMake(300, 30, 60, 60)];
+            self.rightImageView=[[UIImageView alloc]initWithFrame:UIRect(300, 30, 60, 60)];
             self.rightImageView.contentMode=UIViewContentModeScaleAspectFit;
             self.rightImageView;
         })];
 
 //        [self addSubview:({
-//            self.deleteButton=[[UIButton alloc]initWithFrame:CGRectMake(280, 100, 32, 32)];
+//            self.deleteButton=[[UIButton alloc]initWithFrame:UIRect(280, 100, 32, 32)];
 //            [self.deleteButton setTitle:@"x" forState:UIControlStateNormal];
 //            [self.deleteButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 //            [self.deleteButton setTitle:@"v" forState:UIControlStateHighlighted];
@@ -102,13 +103,13 @@
     self.commentLabel.text=item.category;
     [self.commentLabel sizeToFit];
     
-    self.commentLabel.frame=CGRectMake(self.sourceLabel.frame.origin.x+self.sourceLabel.frame.size.width+10, self.commentLabel.frame.origin.y, self.commentLabel.frame.size.width, self.commentLabel.frame.size.height);
+    self.commentLabel.frame=CGRectMake(self.sourceLabel.frame.origin.x+self.sourceLabel.frame.size.width+UI(10), self.sourceLabel.frame.origin.y, self.commentLabel.frame.size.width, self.commentLabel.frame.size.height);
     
     self.timeLabel.text=item.date;
     [self.timeLabel sizeToFit];
-    self.timeLabel.frame=CGRectMake(self.commentLabel.frame.origin.x+self.commentLabel.frame.size.width+10, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
 
-    
+    self.timeLabel.frame=CGRectMake(self.commentLabel.frame.origin.x+self.commentLabel.frame.size.width+UI(10), self.sourceLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
+
     [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.thumbnailPicS] placeholderImage:[UIImage imageNamed:@"icon.bundle/icon.png"]];
     
 
