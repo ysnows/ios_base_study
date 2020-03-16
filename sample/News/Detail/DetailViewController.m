@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "YUIScreen.h"
 
 @interface DetailViewController ()<WKNavigationDelegate>
 
@@ -33,12 +34,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:({
-        self.webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, 58, self.view.frame.size.width, self.view.frame.size.height-88)];
+        self.webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, STATUSBARHEIGHT+44, self.view.frame.size.width, self.view.frame.size.height-STATUSBARHEIGHT+44)];
         self.webview;
     })];
     
     [self.view addSubview:({
-        self.progressView=[[UIProgressView alloc]initWithFrame:CGRectMake(0, 58, self.view.frame.size.width, 10)];
+        self.progressView=[[UIProgressView alloc]initWithFrame:CGRectMake(0, STATUSBARHEIGHT+44, self.view.frame.size.width, 10)];
         self.progressView;
     })];
     

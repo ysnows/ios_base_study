@@ -10,7 +10,6 @@
 
 @implementation YUIScreen
 
-
 //iphone xs max
 + (CGSize)sizeFor65Inch{
     return CGSizeMake(414,896);

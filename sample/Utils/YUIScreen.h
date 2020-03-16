@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define IS_IPHONE_X_XR_MAX (IS_IPHONE_X || IS_IPHONE_XR || IS_IPHONE_XMAX)
 
-#define IS_IPHONE_X (SCREEN_WIDTH == [GTScreen sizeFor58Inch].width && SCREEN_HEIGHT == [GTScreen sizeFor58Inch].height)
-#define IS_IPHONE_XR (SCREEN_WIDTH == [GTScreen sizeFor61Inch].width && SCREEN_HEIGHT == [GTScreen sizeFor61Inch].height && [UIScreen mainScreen].scale == 2)
-#define IS_IPHONE_XMAX (SCREEN_WIDTH == [GTScreen sizeFor65Inch].width && SCREEN_HEIGHT == [GTScreen sizeFor65Inch].height && [UIScreen mainScreen].scale == 3)
+#define IS_IPHONE_X (SCREEN_WIDTH == [YUIScreen sizeFor58Inch].width && SCREEN_HEIGHT == [YUIScreen sizeFor58Inch].height)
+#define IS_IPHONE_XR (SCREEN_WIDTH == [YUIScreen sizeFor61Inch].width && SCREEN_HEIGHT == [YUIScreen sizeFor61Inch].height && [UIScreen mainScreen].scale == 2)
+#define IS_IPHONE_XMAX (SCREEN_WIDTH == [YUIScreen sizeFor65Inch].width && SCREEN_HEIGHT == [YUIScreen sizeFor65Inch].height && [UIScreen mainScreen].scale == 3)
 
 #define STATUSBARHEIGHT (IS_IPHONE_X_XR_MAX ? 44 : 20)
 
