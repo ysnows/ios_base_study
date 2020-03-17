@@ -43,7 +43,13 @@
 
 
 -(void)tapGesture{
-
+    NSURL *url=[NSURL URLWithString:@"weixin://"];
+    BOOL canOpenUrl=[[UIApplication sharedApplication] canOpenURL:url];
+    if (canOpenUrl) {
+        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:^(BOOL success) {
+            
+        }];
+    }
     
 }
 

@@ -11,6 +11,9 @@
 #import "VideoViewController.h"
 #import "RecommendViewController.h"
 #import "MineViewController.h"
+#import "SplashView.h"
+
+
 
 @interface AppDelegate ()
 
@@ -19,6 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    
+
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];
 
@@ -32,10 +38,18 @@
     [tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
     UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:tabbarController];
     
-    
     self.window.rootViewController=navigationController;
     [self.window makeKeyAndVisible];
+    
+    [self.window addSubview:[[SplashView alloc]initWithFrame:self.window.bounds]];
+
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+
+    return YES;
+}
+
 
 @end

@@ -544,11 +544,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysnows.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,11 +569,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysnows.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
