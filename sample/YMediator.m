@@ -41,4 +41,14 @@
 }
 
 
++ (void)registerProtocal:(Protocol *)proto forClass:(Class)class{
+    if (proto&&class) {
+        [[[self class]mediatorRouter] setObject:class forKey:NSStringFromProtocol(proto)];
+    }
+}
+
++ (Class)getClassFromProtocal:(Protocol *)proto{
+    return [[[self class]mediatorRouter]objectForKey:NSStringFromProtocol(proto)];
+}
+
 @end

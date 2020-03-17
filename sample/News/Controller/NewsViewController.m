@@ -98,9 +98,13 @@
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:item.uniquekey];
     
         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+       Class newsClass= [YMediator getClassFromProtocal:@protocol(NewsDetailProtocal)];
+       UIViewController *detailViewController = [[newsClass alloc] detailViewControllerWithUrl:item.url];
     
+       [self.navigationController pushViewController:detailViewController animated:YES];
     
-        [YMediator openUrl:@"detail" withParams:@{@"url":item.url,@"controller":self.navigationController}];
+//        [YMediator openUrl:@"detail" withParams:@{@"url":item.url,@"controller":self.navigationController}];
 
 //        NewsDetailViewController *viewController= [[NewsDetailViewController alloc]initWithUrl:item.url];
        

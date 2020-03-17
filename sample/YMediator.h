@@ -11,6 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol NewsDetailProtocal <NSObject>
+    -(UIViewController *)detailViewControllerWithUrl:(NSString *)url;
+@end
+
+
+
 @interface YMediator : NSObject
 
 +(__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl;
@@ -19,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^RouterBlock)(NSDictionary *params);
 +(void)registerForScheme:(NSString *)scheme withBlock:(RouterBlock) block;
 +(void)openUrl:(NSString *)url withParams:(NSDictionary *)params;
+
+
++(void)registerProtocal:(Protocol*) proto forClass:(Class) class;
++(Class)getClassFromProtocal:(Protocol*) proto;
 
 @end
 

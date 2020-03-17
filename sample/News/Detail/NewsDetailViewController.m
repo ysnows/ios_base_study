@@ -10,7 +10,7 @@
 #import "YUIScreen.h"
 #import "YMediator.h"
 
-@interface NewsDetailViewController ()<WKNavigationDelegate>
+@interface NewsDetailViewController ()<WKNavigationDelegate,NewsDetailProtocal>
 
 @property(nonatomic, strong) WKWebView *webview;
 @property(nonatomic, strong) UIProgressView *progressView;
@@ -24,16 +24,18 @@
 
 +(void)load{
     
-    [YMediator registerForScheme:@"detail" withBlock:^(NSDictionary * _Nonnull params) {
-        NSString *url=[params objectForKey:@"url"];
-        NewsDetailViewController *detailViewController = [[self alloc]initWithUrl:url];
-        
-        detailViewController.navigationItem.title=@"Hello World";
-        detailViewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
-        
-        UINavigationController *navigationController= [params objectForKey:@"controller"];
-        [navigationController pushViewController:detailViewController animated:YES];
-    }];
+    [YMediator registerProtocal:@protocol(NewsDetailProtocal) forClass:[self class]];
+
+//    [YMediator registerForScheme:@"detail" withBlock:^(NSDictionary * _Nonnull params) {
+//        NSString *url=[params objectForKey:@"url"];
+//        NewsDetailViewController *detailViewController = [[self alloc]initWithUrl:url];
+//
+//        detailViewController.navigationItem.title=@"Hello World";
+//        detailViewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
+//
+//        UINavigationController *navigationController= [params objectForKey:@"controller"];
+//        [navigationController pushViewController:detailViewController animated:YES];
+//    }];
 }
 
 
@@ -101,5 +103,8 @@
     
 }
     
+- (UIViewController *)detailViewControllerWithUrl:(NSString *)url{
+    return [self initWithUrl:url];
+}
 
 @end
