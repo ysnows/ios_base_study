@@ -12,6 +12,7 @@
 #import "RecommendViewController.h"
 #import "MineViewController.h"
 #import "SplashView.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 
 
 
@@ -46,10 +47,12 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
-
-    return YES;
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [TencentOAuth HandleOpenURL:url];
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [TencentOAuth HandleOpenURL:url];
+}
 
 @end
