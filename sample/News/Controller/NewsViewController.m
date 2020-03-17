@@ -99,14 +99,18 @@
     
         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
     
+    
+        [YMediator openUrl:@"detail" withParams:@{@"url":item.url,@"controller":self.navigationController}];
 
 //        NewsDetailViewController *viewController= [[NewsDetailViewController alloc]initWithUrl:item.url];
        
-        UIViewController *viewController=[YMediator detailViewControllerWithUrl:item.url];
+//        UIViewController *viewController=[YMediator detailViewControllerWithUrl:item.url];
 
-        viewController.navigationItem.title=item.title;
-        viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
-        [self.navigationController pushViewController:viewController animated:YES];
+//        viewController.navigationItem.title=item.title;
+//        viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
+//        [self.navigationController pushViewController:viewController animated:YES];
+    
+
 }
 
 - (void)tableViewCell:(UITableViewCell *)cell clickDeleteButton:(UIButton *)deleteButton{

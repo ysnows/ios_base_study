@@ -19,4 +19,26 @@
 }
 
 
++(NSMutableDictionary *)mediatorRouter{
+    static NSMutableDictionary *params;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        params=@{}.mutableCopy;
+    });
+    
+    return params;
+}
+
++ (void)registerForScheme:(NSString *)scheme withBlock:(RouterBlock)block{
+    if (scheme&&block) {
+        [[[self class] mediatorRouter] setObject:block forKey:scheme];
+    }
+}
+
++ (void)openUrl:(NSString *)url withParams:(NSDictionary *)params{
+   RouterBlock block =  [[[self class]mediatorRouter] objectForKey:url];
+   block(params);
+}
+
+
 @end
