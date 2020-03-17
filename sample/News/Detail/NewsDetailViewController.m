@@ -6,10 +6,10 @@
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "NewsDetailViewController.h"
 #import "YUIScreen.h"
 
-@interface DetailViewController ()<WKNavigationDelegate>
+@interface NewsDetailViewController ()<WKNavigationDelegate>
 
 @property(nonatomic, strong) WKWebView *webview;
 @property(nonatomic, strong) UIProgressView *progressView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation DetailViewController
+@implementation NewsDetailViewController
 
 
 - (instancetype)initWithUrl:(NSString *) url

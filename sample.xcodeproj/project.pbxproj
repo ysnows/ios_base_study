@@ -18,6 +18,7 @@
 		2C24C66623ED164D00D906F5 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C66523ED164D00D906F5 /* icon.bundle */; };
 		2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B838C2419D18D00B5102A /* VideoListLoader.m */; };
 		2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8390241A874600B5102A /* YVideoPlayer.m */; };
+		2C74E61F2420960C00473C98 /* YMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74E61E2420960C00473C98 /* YMediator.m */; };
 		2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E5AEF2400BA980046D891 /* IndexListLoader.m */; };
 		2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA659241C894A009C6D4C /* VideoToolBar.m */; };
 		2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */; };
@@ -29,7 +30,7 @@
 		2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6739E23EE587D000F6ABF /* RecommendViewController.m */; };
 		2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */; };
 		2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A423F1049D000F6ABF /* MineViewController.m */; };
-		2CD673A823F1173D000F6ABF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A723F1173D000F6ABF /* DetailViewController.m */; };
+		2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,9 @@
 		2C5B838C2419D18D00B5102A /* VideoListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListLoader.m; sourceTree = "<group>"; };
 		2C5B838F241A874600B5102A /* YVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YVideoPlayer.h; sourceTree = "<group>"; };
 		2C5B8390241A874600B5102A /* YVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YVideoPlayer.m; sourceTree = "<group>"; };
+		2C74E61C2420872400473C98 /* sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sample.entitlements; sourceTree = "<group>"; };
+		2C74E61D2420960C00473C98 /* YMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMediator.h; sourceTree = "<group>"; };
+		2C74E61E2420960C00473C98 /* YMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMediator.m; sourceTree = "<group>"; };
 		2C7E5AEE2400BA980046D891 /* IndexListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexListLoader.h; sourceTree = "<group>"; };
 		2C7E5AEF2400BA980046D891 /* IndexListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexListLoader.m; sourceTree = "<group>"; };
 		2CBDA658241C894A009C6D4C /* VideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBar.h; sourceTree = "<group>"; };
@@ -75,8 +79,8 @@
 		2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		2CD673A323F1049D000F6ABF /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		2CD673A423F1049D000F6ABF /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		2CD673A623F1173D000F6ABF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		2CD673A723F1173D000F6ABF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2CD673A623F1173D000F6ABF /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		7E84C2A4249DFD61C45591BC /* libPods-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,8 +163,8 @@
 		2C1BCA4123FCE69400924F3E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				2CD673A623F1173D000F6ABF /* DetailViewController.h */,
-				2CD673A723F1173D000F6ABF /* DetailViewController.m */,
+				2CD673A623F1173D000F6ABF /* NewsDetailViewController.h */,
+				2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -186,6 +190,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2C74E61C2420872400473C98 /* sample.entitlements */,
 				2CC6A51F241F6306007A13CA /* Views */,
 				2C5B838E241A873600B5102A /* Utils */,
 				2C1BCA3F23FCE5B100924F3E /* Video */,
@@ -201,6 +206,8 @@
 				2C24C65D23ED135500D906F5 /* Info.plist */,
 				2CC6A51D241F54CA007A13CA /* LaunchScreen.storyboard */,
 				2C24C65E23ED135500D906F5 /* main.m */,
+				2C74E61D2420960C00473C98 /* YMediator.h */,
+				2C74E61E2420960C00473C98 /* YMediator.m */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -404,7 +411,7 @@
 				2CC6A522241F631C007A13CA /* SplashView.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
-				2CD673A823F1173D000F6ABF /* DetailViewController.m in Sources */,
+				2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */,
 				2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */,
 				2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */,
 				2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */,
@@ -413,6 +420,7 @@
 				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
 				2C24C65123ED135400D906F5 /* SceneDelegate.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,
+				2C74E61F2420960C00473C98 /* YMediator.m in Sources */,
 				2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */,
 				2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */,
 				2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */,
@@ -542,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = sample/sample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
 				ENABLE_BITCODE = YES;
@@ -567,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = sample/sample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89P23K5S54;
 				ENABLE_BITCODE = YES;

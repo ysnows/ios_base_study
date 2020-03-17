@@ -8,12 +8,13 @@
 
 #import "NewsViewController.h"
 #import "NewsTableViewCell.h"
-#import "DetailViewController.h"
+#import "NewsDetailViewController.h"
 #import "DeleteDialog.h"
 #import "IndexListLoader.h"
 #import "NewsItem.h"
 #import "MJRefresh.h"
 #import "YUIScreen.h"
+#import "YMediator.h"
 
 
 @interface NewsViewController ()<UITableViewDataSource,UITabBarDelegate,NewsTableViewCellDelegate>
@@ -97,8 +98,12 @@
         [[NSUserDefaults standardUserDefaults]setBool:YES forKey:item.uniquekey];
     
         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
 
-        DetailViewController *viewController= [[DetailViewController alloc]initWithUrl:item.url];
+//        NewsDetailViewController *viewController= [[NewsDetailViewController alloc]initWithUrl:item.url];
+       
+        UIViewController *viewController=[YMediator detailViewControllerWithUrl:item.url];
+
         viewController.navigationItem.title=item.title;
         viewController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"share" style:UIBarButtonItemStylePlain target:nil action:nil];
         [self.navigationController pushViewController:viewController animated:YES];
