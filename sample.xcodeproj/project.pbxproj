@@ -35,6 +35,8 @@
 		2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */; };
 		2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A423F1049D000F6ABF /* MineViewController.m */; };
 		2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */; };
+		2CD93733242254E700F90BFF /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD93732242254E700F90BFF /* QQLogin.m */; };
+		2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9373624226EC400F90BFF /* UIImageView+Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,10 @@
 		2CD673A423F1049D000F6ABF /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		2CD673A623F1173D000F6ABF /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
 		2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		2CD93731242254E700F90BFF /* QQLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQLogin.h; sourceTree = "<group>"; };
+		2CD93732242254E700F90BFF /* QQLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQLogin.m; sourceTree = "<group>"; };
+		2CD9373524226EC400F90BFF /* UIImageView+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Circle.h"; sourceTree = "<group>"; };
+		2CD9373624226EC400F90BFF /* UIImageView+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Circle.m"; sourceTree = "<group>"; };
 		7E84C2A4249DFD61C45591BC /* libPods-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,6 +210,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2CD9373424226E3A00F90BFF /* Category */,
 				2C74E61C2420872400473C98 /* sample.entitlements */,
 				2CC6A51F241F6306007A13CA /* Views */,
 				2C5B838E241A873600B5102A /* Utils */,
@@ -233,6 +240,8 @@
 				2C5B8390241A874600B5102A /* YVideoPlayer.m */,
 				2CBDA65B241D2FEF009C6D4C /* YUIScreen.h */,
 				2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */,
+				2CD93731242254E700F90BFF /* QQLogin.h */,
+				2CD93732242254E700F90BFF /* QQLogin.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,6 +307,15 @@
 				2CD1F630241892F9006BEFB2 /* Video.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		2CD9373424226E3A00F90BFF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9373524226EC400F90BFF /* UIImageView+Circle.h */,
+				2CD9373624226EC400F90BFF /* UIImageView+Circle.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		732F51D4417DC7D209ED49E7 /* Frameworks */ = {
@@ -428,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */,
 				2CC6A522241F631C007A13CA /* SplashView.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
@@ -447,6 +466,7 @@
 				2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */,
 				2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */,
 				2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */,
+				2CD93733242254E700F90BFF /* QQLogin.m in Sources */,
 				2CD1F631241892F9006BEFB2 /* Video.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

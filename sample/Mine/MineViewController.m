@@ -9,15 +9,19 @@
 #import "MineViewController.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "YUIScreen.h"
+#import "QQLogin.h"
+#import <SDWebImage.h>
+#import "UIImageView+Circle.h"
 
 
-@interface MineViewController ()<UIGestureRecognizerDelegate,TencentSessionDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface MineViewController ()<UIGestureRecognizerDelegate ,UITableViewDelegate,UITableViewDataSource>
 
-@property(nonatomic, strong) TencentOAuth *tencentOAuth;
-@property(nonatomic, strong) NSArray *permissions;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIView *headerView;
 @property(nonatomic, strong) UIImageView *headerImageView;
+@property(nonatomic, strong) NSString *nickname;
+@property(nonatomic, strong) NSString *city;
+@property(nonatomic, strong) NSString *avatarUrl;
 
 @end
 
@@ -30,11 +34,6 @@
         self.tabBarItem.title=@"我的";
         self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
-        
-        _tencentOAuth=[[TencentOAuth alloc]initWithAppId:@"1106325594" andDelegate:self];
-        _permissions=[NSArray arrayWithObjects:@"get_user_info",@"add_share", nil];
-
-
     }
     
     return self;
@@ -65,6 +64,7 @@
 
 
 -(void)tapGesture{
+    
     NSURL *url=[NSURL URLWithString:@"weixin://"];
     BOOL canOpenUrl=[[UIApplication sharedApplication] canOpenURL:url];
     if (canOpenUrl) {
@@ -72,7 +72,6 @@
             
         }];
     }
-    
 }
 
 - (void)tencentDidLogin{
@@ -85,12 +84,15 @@
     _headerView.backgroundColor=[UIColor whiteColor];
    
     [_headerView addSubview:({
-        _headerImageView= [[UIImageView alloc]initWithFrame:CGRectMake(0, 30, _headerView.bounds.size.width, 120)];
+        _headerImageView= [[UIImageView alloc]initWithFrame:CGRectMake((_headerView.bounds.size.width-120)/2, 30, 120, 120)];
         
         _headerImageView.backgroundColor=[UIColor whiteColor];
         _headerImageView.contentMode=UIViewContentModeScaleAspectFit;
-        _headerImageView.clipsToBounds=YES;
+
         [_headerImageView setUserInteractionEnabled:YES];
+        
+        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(toQQLogin)];
+        [_headerImageView addGestureRecognizer:tap];
         
         _headerImageView;
     })];
@@ -100,11 +102,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
-    _headerImageView.image=[UIImage imageNamed:@"icon.bundle/icon.png"];
+    if ([_avatarUrl length]>0) {
+        [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:_avatarUrl] placeholderImage:[UIImage imageNamed:@"icon.bundle/icon.png"]];
+        [_headerImageView asCircle];
+    }else{
+        _headerImageView.image=[UIImage imageNamed:@"icon.bundle/icon.png"];
+    }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
+
     return UI(200);
 }
 
@@ -115,15 +123,39 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text=@"name";
-    cell.detailTextLabel.text=@"hello world";
-    
+
+    if (indexPath.row==0) {
+        if ([_nickname length]>0) {
+            cell.textLabel.text=_nickname;
+        }else{
+            cell.textLabel.text=@"昵称";
+        }
+    }
+
+    if (indexPath.row==1) {
+        if ([_city length]>0) {
+            cell.textLabel.text=_city;
+        }else{
+            cell.textLabel.text=@"地区";
+        }
+    }
+
     return cell;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
-
+-(void)toQQLogin{
+    [[QQLogin sharedInstance]loginWithSuccessBlock:^(NSDictionary * _Nonnull userInfo, BOOL success) {
+        if (success) {
+            self.avatarUrl=[userInfo objectForKey:@"figureurl_qq_2"];
+            self.nickname = [userInfo objectForKey:@"nickname"];
+            self.city =[userInfo objectForKey:@"city"];
+            [self.tableView reloadData];
+        }
+    }];
+}
 @end
