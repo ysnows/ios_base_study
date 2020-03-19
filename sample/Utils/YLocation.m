@@ -9,7 +9,7 @@
 #import "YLocation.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface YLocation ()<CLLocationManagerDelegate>
+@interface YLocation () <CLLocationManagerDelegate>
 
 @property(nonatomic, strong) CLLocationManager *locationManager;
 
@@ -26,31 +26,52 @@
     return instance;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        _locationManager=[[CLLocationManager alloc]init];
-        _locationManager.delegate=self;
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
     }
     return self;
 }
 
-- (void)checkLocation{
-    if (![_locationManager locationServicesEnabled]){
-        
+- (void)checkLocation {
+    if (![_locationManager locationServicesEnabled]) {
+
     }
-    
-    if([CLLocationManager authorizationStatus] ==     kCLAuthorizationStatusNotDetermined){
+
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         [_locationManager requestWhenInUseAuthorization];
     }
 
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    CLLocation *location = [locations firstObject];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        
+        if ([placemarks count] >0){
+            
+               CLPlacemark *mark= [placemarks firstObject];
+//               NSString *city=[mark.addressDictionary objectForKey:@"City"];
+//               NSLog(@"dictcity: %@", city);
+            
+               NSLog(@" mark.locality: %@",  mark.locality);
+           
+           //rac
+        }
+    }];
     
-    
+    [self.locationManager stopUpdatingLocation];
+
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self.locationManager startUpdatingLocation];
+    }
 }
 
 
