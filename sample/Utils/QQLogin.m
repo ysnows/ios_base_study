@@ -11,7 +11,10 @@
 
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 @interface QQLogin ()<TencentSessionDelegate>
 
@@ -44,7 +47,7 @@
     if (self) {
         _tencentOAuth=[[TencentOAuth alloc]initWithAppId:@"1106325594" andDelegate:self];
         _permissions=[NSArray arrayWithObjects:@"get_user_info",@"add_share", nil];
-        
+
     }
     return self;
 }
@@ -56,6 +59,14 @@
     NSString *openId = [userDefault objectForKey:@"open_id"];
     NSDate *expiration_date = [userDefault objectForKey:@"expiration_date"];
     NSDate *nowDate=[NSDate date];
+    
+    
+
+    DDLogVerbose(@"Verbose");
+
+    NSLog(@"Hello");
+
+
     NSComparisonResult result = [nowDate compare:expiration_date];
     if (accessToken!=nil && result == NSOrderedAscending) {
         [_tencentOAuth setAccessToken:accessToken];

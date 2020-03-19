@@ -37,6 +37,7 @@
 		2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A723F1173D000F6ABF /* NewsDetailViewController.m */; };
 		2CD93733242254E700F90BFF /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD93732242254E700F90BFF /* QQLogin.m */; };
 		2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9373624226EC400F90BFF /* UIImageView+Circle.m */; };
+		2CD9373D24234BEF00F90BFF /* YLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9373C24234BEF00F90BFF /* YLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		2CD93732242254E700F90BFF /* QQLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQLogin.m; sourceTree = "<group>"; };
 		2CD9373524226EC400F90BFF /* UIImageView+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Circle.h"; sourceTree = "<group>"; };
 		2CD9373624226EC400F90BFF /* UIImageView+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Circle.m"; sourceTree = "<group>"; };
+		2CD9373B24234BEF00F90BFF /* YLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLocation.h; sourceTree = "<group>"; };
+		2CD9373C24234BEF00F90BFF /* YLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLocation.m; sourceTree = "<group>"; };
 		7E84C2A4249DFD61C45591BC /* libPods-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +245,8 @@
 				2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */,
 				2CD93731242254E700F90BFF /* QQLogin.h */,
 				2CD93732242254E700F90BFF /* QQLogin.m */,
+				2CD9373B24234BEF00F90BFF /* YLocation.h */,
+				2CD9373C24234BEF00F90BFF /* YLocation.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */,
 				2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */,
 				2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */,
+				2CD9373D24234BEF00F90BFF /* YLocation.m in Sources */,
 				2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */,
 				2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */,
 				2CD93733242254E700F90BFF /* QQLogin.m in Sources */,

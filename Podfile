@@ -10,6 +10,7 @@ pod 'SDWebImage', '~> 5.0'
 pod 'MJExtension'
 pod 'MJRefresh'
 pod 'AFNetworking'
+pod 'CocoaLumberjack'
 
 end
 
