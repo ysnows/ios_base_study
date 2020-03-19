@@ -8,6 +8,7 @@
 
 #import "YNotification.h"
 #import <UserNotifications/UserNotifications.h>
+#import <UIKit/UIKit.h>
 
 @interface YNotification ()<UNUserNotificationCenterDelegate>
 
@@ -41,13 +42,17 @@
     UNUserNotificationCenter *center=[UNUserNotificationCenter currentNotificationCenter];
     center.delegate=self;
     [center requestAuthorizationWithOptions:UNAuthorizationOptionBadge| UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        NSLog(@"%b",granted);
         if (granted) {
+            
             [self pushLocalNotification];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication]registerForRemoteNotifications];
+            });
         }
     }];
-
 }
+
 
 
 - (void)pushLocalNotification{
