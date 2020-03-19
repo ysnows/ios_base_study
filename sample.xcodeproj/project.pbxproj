@@ -23,6 +23,7 @@
 		2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B838C2419D18D00B5102A /* VideoListLoader.m */; };
 		2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8390241A874600B5102A /* YVideoPlayer.m */; };
 		2C74E61F2420960C00473C98 /* YMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74E61E2420960C00473C98 /* YMediator.m */; };
+		2C78FBE524235B66006A7E60 /* YNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78FBE424235B66006A7E60 /* YNotification.m */; };
 		2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E5AEF2400BA980046D891 /* IndexListLoader.m */; };
 		2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA659241C894A009C6D4C /* VideoToolBar.m */; };
 		2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */; };
@@ -71,6 +72,8 @@
 		2C74E61C2420872400473C98 /* sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sample.entitlements; sourceTree = "<group>"; };
 		2C74E61D2420960C00473C98 /* YMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMediator.h; sourceTree = "<group>"; };
 		2C74E61E2420960C00473C98 /* YMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMediator.m; sourceTree = "<group>"; };
+		2C78FBE324235B66006A7E60 /* YNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNotification.h; sourceTree = "<group>"; };
+		2C78FBE424235B66006A7E60 /* YNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNotification.m; sourceTree = "<group>"; };
 		2C7E5AEE2400BA980046D891 /* IndexListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexListLoader.h; sourceTree = "<group>"; };
 		2C7E5AEF2400BA980046D891 /* IndexListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexListLoader.m; sourceTree = "<group>"; };
 		2CBDA658241C894A009C6D4C /* VideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBar.h; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 				2CD93732242254E700F90BFF /* QQLogin.m */,
 				2CD9373B24234BEF00F90BFF /* YLocation.h */,
 				2CD9373C24234BEF00F90BFF /* YLocation.m */,
+				2C78FBE324235B66006A7E60 /* YNotification.h */,
+				2C78FBE424235B66006A7E60 /* YNotification.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 			files = (
 				2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */,
 				2CC6A522241F631C007A13CA /* SplashView.m in Sources */,
+				2C78FBE524235B66006A7E60 /* YNotification.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
 				2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */,

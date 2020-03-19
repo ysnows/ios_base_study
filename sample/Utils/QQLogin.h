@@ -20,6 +20,7 @@ typedef void (^LoginSuccessBlock)(NSDictionary *userInfo,BOOL success);
 
 -(void)shareArticle:(NSString *)url;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

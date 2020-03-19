@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YNotification : NSObject
 
+
++ (instancetype)sharedInstance;
+
+-(void)checkNotificationAuthorization;
+
+-(void)pushLocalNotification;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

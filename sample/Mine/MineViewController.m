@@ -51,7 +51,8 @@
 //        [view addGestureRecognizer:tap];
 //        view;
 //    })];
-    
+
+
     [self.view addSubview:({
         _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
         _tableView.delegate=self;
@@ -59,7 +60,12 @@
         _tableView;
     })];
 
+    [[QQLogin sharedInstance]loginWithSuccessBlock:^(NSDictionary * _Nonnull userInfo, BOOL success) {
+        
+    }];
     // Do any additional setup after loading the view.
+    
+    [self toQQLogin];
 }
 
 
@@ -149,6 +155,7 @@
 }
 
 -(void)toQQLogin{
+    
     [[QQLogin sharedInstance]loginWithSuccessBlock:^(NSDictionary * _Nonnull userInfo, BOOL success) {
         if (success) {
             self.avatarUrl=[userInfo objectForKey:@"figureurl_qq_2"];

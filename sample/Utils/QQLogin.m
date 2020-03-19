@@ -52,21 +52,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
     return self;
 }
 
+
 - (void)loginWithSuccessBlock:(LoginSuccessBlock)loginBlock{
     _loginBlock=loginBlock;
+    
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSString *accessToken = [userDefault objectForKey:@"access_token"];
     NSString *openId = [userDefault objectForKey:@"open_id"];
     NSDate *expiration_date = [userDefault objectForKey:@"expiration_date"];
     NSDate *nowDate=[NSDate date];
     
-    
-
-    DDLogVerbose(@"Verbose");
-
-    NSLog(@"Hello");
-
-
     NSComparisonResult result = [nowDate compare:expiration_date];
     if (accessToken!=nil && result == NSOrderedAscending) {
         [_tencentOAuth setAccessToken:accessToken];

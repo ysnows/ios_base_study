@@ -15,6 +15,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "YLocation.h"
+#import "YNotification.h"
 
 
 
@@ -26,7 +27,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [[YLocation sharedInstance]checkLocation];
 
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -45,6 +45,9 @@
     [self.window makeKeyAndVisible];
     
     [self.window addSubview:[[SplashView alloc]initWithFrame:self.window.bounds]];
+    
+    [[YLocation sharedInstance]checkLocation];
+    [[YNotification sharedInstance]checkNotificationAuthorization];
 
     return YES;
 }
