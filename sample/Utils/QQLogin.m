@@ -9,6 +9,10 @@
 #import "QQLogin.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 
+#import <TencentOpenAPI/QQApiInterfaceObject.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+
 @interface QQLogin ()<TencentSessionDelegate>
 
 @property(nonatomic, strong) TencentOAuth *tencentOAuth;
@@ -102,6 +106,36 @@
         _loginBlock(userInfo,YES);
     }
     
+}
+
+
+- (void)shareArticle:(NSString *)url{
+    
+    //一定要加上这行代码 虽然官方文档并未说明 不然很可能调不起分享界面**
+
+      TencentOAuth *auth = [[TencentOAuth alloc] initWithAppId:@"1106325594" andDelegate:self];
+
+        NSString *title =@"shareTitleStr";
+
+        NSString *description =@"shareDetailStr";
+
+        NSString *previewImageUrl =@"https://upload.jianshu.io/users/upload_avatars/8532098/0eb21017-4f7a-4449-88af-b3f0ebd0d578.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/80/h/80/format/webp";
+
+        QQApiNewsObject *newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url]
+
+                                title:title
+
+                                description:description
+
+                                previewImageURL:[NSURL URLWithString:previewImageUrl]];
+    
+
+        newsObj.shareDestType = ShareDestTypeQQ;
+        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
+
+    //将内容分享到qq
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+
 }
 
 @end

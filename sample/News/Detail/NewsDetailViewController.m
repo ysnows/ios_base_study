@@ -9,6 +9,7 @@
 #import "NewsDetailViewController.h"
 #import "YUIScreen.h"
 #import "YMediator.h"
+#import "QQLogin.h"
 
 @interface NewsDetailViewController ()<WKNavigationDelegate,NewsDetailProtocal>
 
@@ -51,6 +52,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(_shareArticle)];
+    
     [self.view addSubview:({
         self.webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, STATUSBARHEIGHT+44, self.view.frame.size.width, self.view.frame.size.height-STATUSBARHEIGHT+44)];
         self.webview;
@@ -105,6 +109,10 @@
     
 - (UIViewController *)detailViewControllerWithUrl:(NSString *)url{
     return [self initWithUrl:url];
+}
+
+-(void)_shareArticle{
+    [[QQLogin sharedInstance]shareArticle:_url];
 }
 
 @end

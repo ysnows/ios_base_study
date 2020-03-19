@@ -13,6 +13,7 @@
 #import "MineViewController.h"
 #import "SplashView.h"
 #import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 
 
@@ -48,11 +49,30 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [TencentOAuth HandleOpenURL:url];
+    [TencentOAuth HandleOpenURL:url];
+    return YES;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    return [TencentOAuth HandleOpenURL:url];
+    [TencentOAuth HandleOpenURL:url];
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0); {
+
+        // Demo处理Universallink的示例代码
+        if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+
+             NSURL *url = userActivity.webpageURL;
+             if (url && [TencentOAuth CanHandleUniversalLink:url]) {
+
+                  // 兼容[QQApiInterface handleOpenURL:delegate:]的接口回调能力
+//                 [QQApiInterface handleOpenUniversallink:url delegate:(id<QQApiInterfaceDelegate>) [QQApiShareEntry class]];
+                 
+                 return [TencentOAuth HandleUniversalLink:url];
+              }
+        }
+        return YES;
 }
 
 @end

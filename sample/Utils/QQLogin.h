@@ -18,6 +18,7 @@ typedef void (^LoginSuccessBlock)(NSDictionary *userInfo,BOOL success);
 
 -(void)loginWithSuccessBlock:(LoginSuccessBlock) loginBlock;
 
+-(void)shareArticle:(NSString *)url;
 
 @end
 
