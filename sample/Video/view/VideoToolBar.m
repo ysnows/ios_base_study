@@ -64,6 +64,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor=[UIColor whiteColor];
         
         [self addSubview:({
             _imgName=[[UIImageView alloc]initWithFrame:CGRectZero];

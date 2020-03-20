@@ -34,6 +34,7 @@
 		2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA659241C894A009C6D4C /* VideoToolBar.m */; };
 		2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */; };
 		2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDD04C2404D5A400AF1943 /* NewsItem.m */; };
+		2CBE78432424FE5B00CFC811 /* RecommendSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBE78422424FE5B00CFC811 /* RecommendSectionController.m */; };
 		2CC6A522241F631C007A13CA /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6A521241F631C007A13CA /* SplashView.m */; };
 		2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F62C2418926D006BEFB2 /* VideoListCell.m */; };
 		2CD1F631241892F9006BEFB2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F630241892F9006BEFB2 /* Video.m */; };
@@ -122,6 +123,8 @@
 		2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUIScreen.m; sourceTree = "<group>"; };
 		2CBDD04C2404D5A400AF1943 /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
 		2CBDD04D2404D5A400AF1943 /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
+		2CBE78412424FE5B00CFC811 /* RecommendSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendSectionController.h; sourceTree = "<group>"; };
+		2CBE78422424FE5B00CFC811 /* RecommendSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendSectionController.m; sourceTree = "<group>"; };
 		2CC6A520241F631C007A13CA /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
 		2CC6A521241F631C007A13CA /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		2CD1F62B2418926D006BEFB2 /* VideoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 			children = (
 				2CD6739D23EE587D000F6ABF /* RecommendViewController.h */,
 				2CD6739E23EE587D000F6ABF /* RecommendViewController.m */,
+				2CBE78412424FE5B00CFC811 /* RecommendSectionController.h */,
+				2CBE78422424FE5B00CFC811 /* RecommendSectionController.m */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -596,6 +601,7 @@
 				2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */,
 				2C24C65F23ED135500D906F5 /* main.m in Sources */,
 				2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */,
+				2CBE78432424FE5B00CFC811 /* RecommendSectionController.m in Sources */,
 				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
 				2C24C65123ED135400D906F5 /* SceneDelegate.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,

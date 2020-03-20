@@ -12,6 +12,7 @@ pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'CocoaLumberjack'
 pod 'Reveal-SDK', '~> 21.0', :configurations => ['Debug']
+pod 'IGListKit', '~> 4.0.0'
 
 
 end

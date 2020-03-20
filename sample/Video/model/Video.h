@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <IGListDiffKit/IGListDiffable.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Video : NSObject
+@interface Video : NSObject<IGListDiffable>
 
 @property(nonatomic, copy) NSString *corver_url;
 @property(nonatomic, copy) NSString *video_url;

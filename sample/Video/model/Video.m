@@ -10,4 +10,13 @@
 
 @implementation Video
 
+
+- (nonnull id<NSObject>)diffIdentifier {
+    return _video_url;
+}
+
+- (BOOL)isEqualToDiffableObject:(nullable id<IGListDiffable>)object {
+    return ((Video*)object).video_url == _video_url;
+}
+
 @end

@@ -7,10 +7,21 @@
 //
 
 #import "RecommendViewController.h"
+#import "VideoListLoader.h"
+#import <IGListKit/IGListKit.h>
+#import "YUIScreen.h"
+#import "RecommendSectionController.h"
+#import <MJRefresh/MJRefresh.h>
 
-@interface RecommendViewController ()<UIScrollViewDelegate>
+@interface RecommendViewController ()<IGListAdapterDataSource>
+
+@property(nonatomic, strong) NSArray *dataArr;
+@property(nonatomic, strong) IGListAdapter *adapter;
+@property(nonatomic, strong) UICollectionView *collectionView;
+
 
 @end
+
 
 @implementation RecommendViewController
 
@@ -29,45 +40,72 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    VideoListLoader *listLoader = [[VideoListLoader alloc]init];
+    #pragma mark - collectionview add
+    [self.view addSubview:({
+        _collectionView=[[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:[UICollectionViewFlowLayout new]];
+        _collectionView.backgroundColor=[UIColor whiteColor];
+        _collectionView.mj_header=[MJRefreshHeader headerWithRefreshingBlock:^{
+            #pragma mark - listloader init&load
+            [listLoader loadVideoListWithCompleted:^(NSArray<Video *> * _Nonnull videoArr) {
+                self->_dataArr=videoArr;
+                [self->_adapter reloadDataWithCompletion:nil];
+                [self->_collectionView.mj_header endRefreshing];
+            }];
+            
+        }];
+        _collectionView;
+    })];
+
+
+   #pragma mark - adapter init
+    _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:0];
+    _adapter.dataSource=self;
+    _adapter.collectionView=_collectionView;
+    
+    
+    [_collectionView.mj_header  beginRefreshing];
+
     // Do any additional setup after loading the view.
-
-    UIScrollView *scrollView=[[UIScrollView alloc]initWithFrame:self.view.bounds];
-    scrollView.backgroundColor=[UIColor lightGrayColor];
-    
-    NSArray *colorArr=@[[UIColor redColor],[UIColor greenColor],[UIColor blueColor],[UIColor blackColor],[UIColor grayColor]];
-
-    for (int i=0; i<5; i++) {
-        UIView *view=[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width*i, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        view.backgroundColor=[colorArr objectAtIndex:i];
-        [scrollView addSubview:view];
-    }
-    scrollView.pagingEnabled=YES;
-    
-    scrollView.delegate=self;
-    
-    scrollView.contentSize=CGSizeMake(self.view.frame.size.width*5, self.view.frame.size.height);
-    
-    [self.view addSubview:scrollView];
+//    UIScrollView *scrollView=[[UIScrollView alloc]initWithFrame:self.view.bounds];
+//    scrollView.backgroundColor=[UIColor lightGrayColor];
+//
+//    NSArray *colorArr=@[[UIColor redColor],[UIColor greenColor],[UIColor blueColor],[UIColor blackColor],[UIColor grayColor]];
+//
+//    for (int i=0; i<5; i++) {
+//        UIView *view=[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width*i, 0, self.view.frame.size.width, self.view.frame.size.height)];
+//        view.backgroundColor=[colorArr objectAtIndex:i];
+//        [scrollView addSubview:view];
+//    }
+//    scrollView.pagingEnabled=YES;
+//
+//    scrollView.delegate=self;
+//
+//    scrollView.contentSize=CGSizeMake(self.view.frame.size.width*5, self.view.frame.size.height);
+//
+//    [self.view addSubview:scrollView];
     
 }
 
 
-- (void)scrollViewDidScroll:(UIScrollView *)scroll{
-    NSLog(@"offset is %f",scroll.contentOffset.x);
+//- (void)scrollViewDidScroll:(UIScrollView *)scroll{
+//    NSLog(@"offset is %f",scroll.contentOffset.x);
+//}
+//
+
+
+- (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
+    return _dataArr;
+
 }
-    
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
+    return [RecommendSectionController new];
 }
-*/
 
+- (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
 
-
+    return nil;
+}
 @end
