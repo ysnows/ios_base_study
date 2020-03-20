@@ -11,6 +11,8 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'CocoaLumberjack'
+pod 'Reveal-SDK', '~> 21.0', :configurations => ['Debug']
+
 
 end
 
