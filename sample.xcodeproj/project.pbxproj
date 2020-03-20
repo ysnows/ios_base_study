@@ -24,6 +24,7 @@
 		2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B8390241A874600B5102A /* YVideoPlayer.m */; };
 		2C74E61F2420960C00473C98 /* YMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74E61E2420960C00473C98 /* YMediator.m */; };
 		2C78FBE524235B66006A7E60 /* YNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78FBE424235B66006A7E60 /* YNotification.m */; };
+		2C78FBE8242466C7006A7E60 /* ICONBLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C78FBE7242466C7006A7E60 /* ICONBLACK.png */; };
 		2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E5AEF2400BA980046D891 /* IndexListLoader.m */; };
 		2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA659241C894A009C6D4C /* VideoToolBar.m */; };
 		2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDA65C241D2FEF009C6D4C /* YUIScreen.m */; };
@@ -74,6 +75,7 @@
 		2C74E61E2420960C00473C98 /* YMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMediator.m; sourceTree = "<group>"; };
 		2C78FBE324235B66006A7E60 /* YNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNotification.h; sourceTree = "<group>"; };
 		2C78FBE424235B66006A7E60 /* YNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNotification.m; sourceTree = "<group>"; };
+		2C78FBE7242466C7006A7E60 /* ICONBLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICONBLACK.png; sourceTree = "<group>"; };
 		2C7E5AEE2400BA980046D891 /* IndexListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexListLoader.h; sourceTree = "<group>"; };
 		2C7E5AEF2400BA980046D891 /* IndexListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexListLoader.m; sourceTree = "<group>"; };
 		2CBDA658241C894A009C6D4C /* VideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBar.h; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2C78FBE6242466A4006A7E60 /* AlternateIcons */,
 				2CD9373424226E3A00F90BFF /* Category */,
 				2C74E61C2420872400473C98 /* sample.entitlements */,
 				2CC6A51F241F6306007A13CA /* Views */,
@@ -254,6 +257,14 @@
 				2C78FBE424235B66006A7E60 /* YNotification.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C78FBE6242466A4006A7E60 /* AlternateIcons */ = {
+			isa = PBXGroup;
+			children = (
+				2C78FBE7242466C7006A7E60 /* ICONBLACK.png */,
+			);
+			path = AlternateIcons;
 			sourceTree = "<group>";
 		};
 		2C7E5AED2400BA7D0046D891 /* loader */ = {
@@ -404,6 +415,7 @@
 			files = (
 				2CC6A51E241F54CA007A13CA /* LaunchScreen.storyboard in Resources */,
 				2C24C66623ED164D00D906F5 /* icon.bundle in Resources */,
+				2C78FBE8242466C7006A7E60 /* ICONBLACK.png in Resources */,
 				2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

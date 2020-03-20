@@ -19,7 +19,7 @@
 
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 @implementation AppDelegate
@@ -39,6 +39,9 @@
     MineViewController *controller4=[[MineViewController alloc]init];
 
     [tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
+    
+    tabbarController.delegate=self;
+    
     UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:tabbarController];
     
     self.window.rootViewController=navigationController;
@@ -83,6 +86,44 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     NSLog(@"device token registed");
+}
+
+
+-(void)_changeBlackIcon{
+    // official with alert
+    
+//    if ([[UIApplication sharedApplication] supportsAlternateIcons]){
+//        [[UIApplication sharedApplication] setAlternateIconName:@"ICONBLACK" completionHandler:^(NSError * _Nullable error) {
+//
+//        }];
+//
+//    }
+    
+    //anti apple private method call analyse withoud alert
+      if ([[UIApplication sharedApplication] respondsToSelector:@selector(supportsAlternateIcons)] &&
+          [[UIApplication sharedApplication] supportsAlternateIcons])
+      {
+          
+          NSMutableString *selectorString = [[NSMutableString alloc] initWithCapacity:40];
+          [selectorString appendString:@"_setAlternate"];
+          [selectorString appendString:@"IconName:"];
+          [selectorString appendString:@"completionHandler:"];
+
+          SEL selector = NSSelectorFromString(selectorString);
+          IMP imp = [[UIApplication sharedApplication] methodForSelector:selector];
+          void (*func)(id, SEL, id, id) = (void *)imp;
+          if (func)
+          {
+              func([UIApplication sharedApplication], selector, @"ICONBLACK", ^(NSError * _Nullable error) {});
+          }
+      }
+}
+
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"did select tabbar");
+    
+    [self _changeBlackIcon];
 }
 
 @end
