@@ -12,6 +12,7 @@
 #import "QQLogin.h"
 #import <SDWebImage.h>
 #import "UIImageView+Circle.h"
+#import "YCommentBar.h"
 
 
 @interface MineViewController ()<UIGestureRecognizerDelegate ,UITableViewDelegate,UITableViewDataSource>
@@ -70,14 +71,16 @@
 
 
 -(void)tapGesture{
-    
-    NSURL *url=[NSURL URLWithString:@"weixin://"];
-    BOOL canOpenUrl=[[UIApplication sharedApplication] canOpenURL:url];
-    if (canOpenUrl) {
-        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:^(BOOL success) {
-            
-        }];
-    }
+
+    [[YCommentBar sharedInstance] showCommentView];
+
+//    NSURL *url=[NSURL URLWithString:@"weixin://"];
+//    BOOL canOpenUrl=[[UIApplication sharedApplication] canOpenURL:url];
+//    if (canOpenUrl) {
+//        [[UIApplication sharedApplication] openURL:url options:nil completionHandler:^(BOOL success) {
+//
+//        }];
+//    }
 }
 
 - (void)tencentDidLogin{
@@ -97,7 +100,7 @@
 
         [_headerImageView setUserInteractionEnabled:YES];
         
-        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(toQQLogin)];
+        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture)];
         [_headerImageView addGestureRecognizer:tap];
         
         _headerImageView;
