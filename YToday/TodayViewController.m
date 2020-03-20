@@ -29,8 +29,6 @@
         [btn addTarget:self action:@selector(_gotoContainingApp) forControlEvents:UIControlEventTouchUpInside];
         btn;
     })];
-    
-    
 
 }
 

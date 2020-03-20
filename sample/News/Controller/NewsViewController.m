@@ -15,6 +15,7 @@
 #import "MJRefresh.h"
 #import "YUIScreen.h"
 #import "YMediator.h"
+#import "YSearchView.h"
 
 
 @interface NewsViewController ()<UITableViewDataSource,UITabBarDelegate,NewsTableViewCellDelegate>
@@ -39,10 +40,20 @@
     return self;
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    YSearchView *searchView=[[YSearchView alloc]initWithFrame:CGRectMake(UI(10), UI(5), SCREEN_WIDTH-UI(10)*2,self.navigationController.navigationBar.bounds.size.height-UI(5)*2 )];
+    
+    [self.tabBarController.navigationItem setTitleView:searchView];
+
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 
 
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
