@@ -27,7 +27,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];
 
@@ -42,6 +41,7 @@
     
     tabbarController.delegate=self;
     
+    
     UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:tabbarController];
     
     self.window.rootViewController=navigationController;
@@ -52,10 +52,14 @@
     [[YLocation sharedInstance]checkLocation];
     [[YNotification sharedInstance]checkNotificationAuthorization];
 
+    NSUserDefaults *todayDefaults=[[NSUserDefaults alloc]initWithSuiteName:@"group.com.ysnows.sample"];
+    [todayDefaults setObject:@"I'm from NSUserDefaults" forKey:@"title"];
+
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
     [TencentOAuth HandleOpenURL:url];
     return YES;
 }
