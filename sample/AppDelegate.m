@@ -82,6 +82,7 @@
 
 
 
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     NSLog(@"device token registed");
 }
