@@ -31,7 +31,7 @@
     self = [super init];
     
     if (self) {
-        self.title=@"推荐";
+//        self.title=@"推荐";
 //        self.tabBarItem.title=@"推荐";
 //        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/like@2x.png"];
 //        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];

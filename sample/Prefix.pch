@@ -6,14 +6,8 @@
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
-#ifndef Prefix_h
-#define Prefix_h
 
-
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
-
-#endif /* Prefix_h */
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "YUIScreen.h"
+#import "Macros/Macro.h"

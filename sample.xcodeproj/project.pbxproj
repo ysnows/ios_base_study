@@ -126,6 +126,10 @@
 		2CBE78442425C69200CFC811 /* YTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTabBarViewController.h; sourceTree = "<group>"; };
 		2CBE78452425C69200CFC811 /* YTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTabBarViewController.m; sourceTree = "<group>"; };
 		2CBE78532425D14300CFC811 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		2CBE7855242603A800CFC811 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		2CBE7856242603A800CFC811 /* ApiMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiMacro.h; sourceTree = "<group>"; };
+		2CBE7857242603A800CFC811 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		2CBE7858242603A800CFC811 /* Noti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Noti.h; sourceTree = "<group>"; };
 		2CC6A520241F631C007A13CA /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
 		2CC6A521241F631C007A13CA /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		2CD1F62B2418926D006BEFB2 /* VideoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2CBE78542426038B00CFC811 /* Macros */,
 				2C78FBE6242466A4006A7E60 /* AlternateIcons */,
 				2CD9373424226E3A00F90BFF /* Category */,
 				2C74E61C2420872400473C98 /* sample.entitlements */,
@@ -365,6 +370,17 @@
 				2CBDD04C2404D5A400AF1943 /* NewsItem.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2CBE78542426038B00CFC811 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				2CBE7856242603A800CFC811 /* ApiMacro.h */,
+				2CBE7857242603A800CFC811 /* Config.h */,
+				2CBE7855242603A800CFC811 /* Macro.h */,
+				2CBE7858242603A800CFC811 /* Noti.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 		2CC6A51F241F6306007A13CA /* Views */ = {
@@ -800,6 +816,7 @@
 					"$(PROJECT_DIR)",
 					"/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/sample/Prefix.pch";
 				INFOPLIST_FILE = sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -838,6 +855,7 @@
 					"$(PROJECT_DIR)",
 					"/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/sample/Prefix.pch";
 				INFOPLIST_FILE = sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

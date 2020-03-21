@@ -21,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+
+
     self.tabBar.translucent = YES;
     // Customize the tabBar background
     self.tabBar.backgroundView.backgroundColor = [UIColor colorWithRed:245/255.0
@@ -35,29 +35,40 @@
     RecommendViewController *thirdVC=[[RecommendViewController alloc]init];
     MineViewController *fourthVC=[[MineViewController alloc]init];
 
+
     [self setViewControllers:@[
-       [[UINavigationController alloc]initWithRootViewController:firstVC],
-       [[UINavigationController alloc]initWithRootViewController:secondVC],
-       [[UINavigationController alloc]initWithRootViewController:thirdVC],
-       [[UINavigationController alloc]initWithRootViewController:fourthVC]
-     ]];
-     
+            [[UINavigationController alloc] initWithRootViewController:firstVC],
+            [[UINavigationController alloc] initWithRootViewController:secondVC],
+            [[UINavigationController alloc] initWithRootViewController:thirdVC],
+            [[UINavigationController alloc] initWithRootViewController:fourthVC]
+    ]];
+
     [self _setImageText];
 }
 
 
 -(void)_setImageText{
-    
+
     NSArray *tabbarImgs=@[@"home",@"video",@"like",@"page"];
+    NSArray *titles=@[@"首页", @"视频", @"推荐", @"我的"];
 
     NSInteger index=0;
     for (RDVTabBarItem *item in [self.tabBar items]) {
 
         UIImage *selectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"icon.bundle/%@_selected@2x.png",[tabbarImgs  objectAtIndex:index]]];
-        
+
         UIImage *unselectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"icon.bundle/%@@2x.png",[tabbarImgs  objectAtIndex:index]]];
-        
+
         [item setFinishedSelectedImage:selectedImg withFinishedUnselectedImage:unselectedImg];
+
+        NSDictionary *selectedAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:11],NSForegroundColorAttributeName: [UIColor blackColor]};
+        [item setSelectedTitleAttributes:selectedAttr];
+
+        NSDictionary *unselectedAttr=@{NSFontAttributeName:[UIFont systemFontOfSize:11],NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+        [item setUnselectedTitleAttributes:unselectedAttr];
+
+
+        item.title = titles[index];
         index++;
     }
 
