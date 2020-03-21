@@ -45,6 +45,9 @@
 		2CD93733242254E700F90BFF /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD93732242254E700F90BFF /* QQLogin.m */; };
 		2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9373624226EC400F90BFF /* UIImageView+Circle.m */; };
 		2CD9373D24234BEF00F90BFF /* YLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9373C24234BEF00F90BFF /* YLocation.m */; };
+		2CEBB4F424264AE90032B425 /* MasonryExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4F324264AE90032B425 /* MasonryExampleViewController.m */; };
+		2CEBB4FA24264C640032B425 /* MasonryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4F924264C640032B425 /* MasonryListTableViewController.m */; };
+		2CEBB4FE24264F4E0032B425 /* MasonryBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +153,12 @@
 		2CD9373624226EC400F90BFF /* UIImageView+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Circle.m"; sourceTree = "<group>"; };
 		2CD9373B24234BEF00F90BFF /* YLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLocation.h; sourceTree = "<group>"; };
 		2CD9373C24234BEF00F90BFF /* YLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLocation.m; sourceTree = "<group>"; };
+		2CEBB4F224264AE90032B425 /* MasonryExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryExampleViewController.h; sourceTree = "<group>"; };
+		2CEBB4F324264AE90032B425 /* MasonryExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryExampleViewController.m; sourceTree = "<group>"; };
+		2CEBB4F824264C640032B425 /* MasonryListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryListTableViewController.h; sourceTree = "<group>"; };
+		2CEBB4F924264C640032B425 /* MasonryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryListTableViewController.m; sourceTree = "<group>"; };
+		2CEBB4FC24264F4E0032B425 /* MasonryBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryBasicView.h; sourceTree = "<group>"; };
+		2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryBasicView.m; sourceTree = "<group>"; };
 		7E84C2A4249DFD61C45591BC /* libPods-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -286,6 +295,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2CEBB4F124264AC60032B425 /* Masonry */,
 				2CBE78542426038B00CFC811 /* Macros */,
 				2C78FBE6242466A4006A7E60 /* AlternateIcons */,
 				2CD9373424226E3A00F90BFF /* Category */,
@@ -421,6 +431,27 @@
 				2CD9373624226EC400F90BFF /* UIImageView+Circle.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		2CEBB4F124264AC60032B425 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				2CEBB4FB24264F2A0032B425 /* ExampleView */,
+				2CEBB4F224264AE90032B425 /* MasonryExampleViewController.h */,
+				2CEBB4F324264AE90032B425 /* MasonryExampleViewController.m */,
+				2CEBB4F824264C640032B425 /* MasonryListTableViewController.h */,
+				2CEBB4F924264C640032B425 /* MasonryListTableViewController.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		2CEBB4FB24264F2A0032B425 /* ExampleView */ = {
+			isa = PBXGroup;
+			children = (
+				2CEBB4FC24264F4E0032B425 /* MasonryBasicView.h */,
+				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
+			);
+			path = ExampleView;
 			sourceTree = "<group>";
 		};
 		732F51D4417DC7D209ED49E7 /* Frameworks */ = {
@@ -617,11 +648,13 @@
 				2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */,
 				2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */,
 				2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */,
+				2CEBB4F424264AE90032B425 /* MasonryExampleViewController.m in Sources */,
 				2C24C65F23ED135500D906F5 /* main.m in Sources */,
 				2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */,
 				2CBE78432424FE5B00CFC811 /* RecommendSectionController.m in Sources */,
 				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,
+				2CEBB4FE24264F4E0032B425 /* MasonryBasicView.m in Sources */,
 				2C74E61F2420960C00473C98 /* YMediator.m in Sources */,
 				2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */,
 				2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */,
@@ -633,6 +666,7 @@
 				2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */,
 				2C7E5AF02400BA980046D891 /* IndexListLoader.m in Sources */,
 				2CBE78462425C69200CFC811 /* YTabBarViewController.m in Sources */,
+				2CEBB4FA24264C640032B425 /* MasonryListTableViewController.m in Sources */,
 				2CD93733242254E700F90BFF /* QQLogin.m in Sources */,
 				2CD1F631241892F9006BEFB2 /* Video.m in Sources */,
 			);

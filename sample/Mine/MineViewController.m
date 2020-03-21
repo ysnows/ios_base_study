@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "YUIScreen.h"
+#import "MasonryListTableViewController.h"
 #import "QQLogin.h"
 #import <SDWebImage.h>
 #import "UIImageView+Circle.h"
@@ -86,7 +87,6 @@
 
 - (void)tencentDidLogin{
     NSLog(@"");
-
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -150,12 +150,16 @@
         }
     }
 
+    if (indexPath.row==2) {
+        cell.textLabel.text=@"Masonry Examples";
+    }
+
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 -(void)toQQLogin{
@@ -169,4 +173,12 @@
         }
     }];
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row==2) {
+        [self.navigationController pushViewController:[MasonryListTableViewController new] animated:YES];
+    }
+}
+
 @end
