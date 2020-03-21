@@ -32,12 +32,12 @@
 {
     self = [super init];
     if (self) {
-//        self.title=@"我的";
+        self.title=@"我的";
 //        self.tabBarItem.title=@"我的";
 //        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/page@2x.png"];
 //        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     }
-    
+
     return self;
 }
 
@@ -63,10 +63,10 @@
     })];
 
     [[QQLogin sharedInstance]loginWithSuccessBlock:^(NSDictionary * _Nonnull userInfo, BOOL success) {
-        
+
     }];
     // Do any additional setup after loading the view.
-    
+
     [self toQQLogin];
 }
 
@@ -86,24 +86,24 @@
 
 - (void)tencentDidLogin{
     NSLog(@"");
-    
+
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     _headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, UI(200))];
     _headerView.backgroundColor=[UIColor whiteColor];
-   
+
     [_headerView addSubview:({
         _headerImageView= [[UIImageView alloc]initWithFrame:CGRectMake((_headerView.bounds.size.width-120)/2, 30, 120, 120)];
-        
+
         _headerImageView.backgroundColor=[UIColor whiteColor];
         _headerImageView.contentMode=UIViewContentModeScaleAspectFit;
 
         [_headerImageView setUserInteractionEnabled:YES];
-        
-        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture)];
-        [_headerImageView addGestureRecognizer:tap];
-        
+
+//        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture)];
+//        [_headerImageView addGestureRecognizer:tap];
+
         _headerImageView;
     })];
 
@@ -118,7 +118,7 @@
     }else{
         _headerImageView.image=[UIImage imageNamed:@"icon.bundle/icon.png"];
     }
-    
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -159,7 +159,7 @@
 }
 
 -(void)toQQLogin{
-    
+
     [[QQLogin sharedInstance]loginWithSuccessBlock:^(NSDictionary * _Nonnull userInfo, BOOL success) {
         if (success) {
             self.avatarUrl=[userInfo objectForKey:@"figureurl_qq_2"];

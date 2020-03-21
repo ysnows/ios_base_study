@@ -29,9 +29,9 @@
 - (instancetype)init
 {
     self = [super init];
-    
+
     if (self) {
-//        self.title=@"推荐";
+        self.title=@"推荐";
 //        self.tabBarItem.title=@"推荐";
 //        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/like@2x.png"];
 //        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
@@ -55,7 +55,7 @@
                 [self->_adapter reloadDataWithCompletion:nil];
                 [self->_collectionView.mj_header endRefreshing];
             }];
-            
+
         }];
         _collectionView;
     })];
@@ -65,7 +65,7 @@
                                                0,
                                                CGRectGetHeight(self.rdv_tabBarController.tabBar.frame),
                                                0);
-        
+
         self.collectionView.contentInset = insets;
         self.collectionView.scrollIndicatorInsets = insets;
     }
@@ -75,8 +75,8 @@
     _adapter = [[IGListAdapter alloc]initWithUpdater:[IGListAdapterUpdater new] viewController:self workingRangeSize:0];
     _adapter.dataSource=self;
     _adapter.collectionView=_collectionView;
-    
-    
+
+
     [_collectionView.mj_header  beginRefreshing];
 
     // Do any additional setup after loading the view.
@@ -97,7 +97,7 @@
 //    scrollView.contentSize=CGSizeMake(self.view.frame.size.width*5, self.view.frame.size.height);
 //
 //    [self.view addSubview:scrollView];
-    
+
 }
 
 
