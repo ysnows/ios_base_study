@@ -16,7 +16,8 @@
 #import "YUIScreen.h"
 #import "YMediator.h"
 #import "YSearchView.h"
-
+#import <RDVTabBarController.h>
+#import <RDVTabBarItem.h>
 
 @interface NewsViewController ()<UITableViewDataSource,UITabBarDelegate,NewsTableViewCellDelegate>
 
@@ -33,9 +34,18 @@
 {
     self = [super init];
     if (self) {
-        self.tabBarItem.title=@"新闻";
-        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/home@2x.png"];
-        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+        
+//
+//        YSearchView *searchView=[[YSearchView alloc]initWithFrame:CGRectMake(UI(10), UI(5), SCREEN_WIDTH-UI(10)*2,self.navigationController.navigationBar.bounds.size.height-UI(5)*2 )];
+////
+//        [self.navigationController.navigationItem setTitleView:searchView];
+
+        
+       self.title=@"新闻";
+       self.navigationItem.title=@"新闻";
+        
+//    self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/home@2x.png"];
+//    self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
     }
     return self;
 }
@@ -44,12 +54,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    YSearchView *searchView=[[YSearchView alloc]initWithFrame:CGRectMake(UI(10), UI(5), SCREEN_WIDTH-UI(10)*2,self.navigationController.navigationBar.bounds.size.height-UI(5)*2 )];
-    
-    [self.tabBarController.navigationItem setTitleView:searchView];
+//    YSearchView *searchView=[[YSearchView alloc]initWithFrame:CGRectMake(UI(10), UI(5), SCREEN_WIDTH-UI(10)*2,self.navigationController.navigationBar.bounds.size.height-UI(5)*2 )];
+//
+//    [self.navigationController.navigationItem setTitleView:searchView];
 
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,7 +69,18 @@
     _tableView.dataSource=self;
     _tableView.delegate=self;
 
-    
+    [[self rdv_tabBarItem] setBadgeValue:@"3"];
+
+    if (self.rdv_tabBarController.tabBar.translucent) {
+        UIEdgeInsets insets = UIEdgeInsetsMake(0,
+                                               0,
+                                               CGRectGetHeight(self.rdv_tabBarController.tabBar.frame),
+                                               0);
+        
+        self.tableView.contentInset = insets;
+        self.tableView.scrollIndicatorInsets = insets;
+    }
+
     self->_loader=[[IndexListLoader alloc]init];
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self->_loader loadListDataWitBlock:^(BOOL success, NSArray<NewsItem *> *  data) {
@@ -73,17 +93,15 @@
         }];
     }];
 
+    
     [self.view addSubview:_tableView];
-
     [self.tableView.mj_header beginRefreshing];
 }
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArr.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cell";

@@ -32,9 +32,10 @@
 {
     self = [super init];
     if (self) {
-        self.tabBarItem.title=@"我的";
-        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/page@2x.png"];
-        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+        self.title=@"我的";
+//        self.tabBarItem.title=@"我的";
+//        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/page@2x.png"];
+//        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     }
     
     return self;

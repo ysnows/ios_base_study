@@ -11,6 +11,7 @@
 #import "VideoListLoader.h"
 #import "MJRefresh.h"
 #import "Video.h"
+#import <RDVTabBarController.h>
 
 
 
@@ -27,9 +28,10 @@
 {
     self = [super init];
     if (self) {
-        self.tabBarItem.title=@"视频";
-        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/video@2x.png"];
-        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
+        self.title=@"视频";
+//        self.tabBarItem.title=@"视频";
+//        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/video@2x.png"];
+//        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
     }
     return self;
 }
@@ -37,6 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing=10;
@@ -61,6 +65,17 @@
             [self->_collectionView reloadData];
         }];
     }];
+    
+    if (self.rdv_tabBarController.tabBar.translucent) {
+        UIEdgeInsets insets = UIEdgeInsetsMake(0,
+                                               0,
+                                               CGRectGetHeight(self.rdv_tabBarController.tabBar.frame),
+                                               0);
+        
+        self.collectionView.contentInset = insets;
+        self.collectionView.scrollIndicatorInsets = insets;
+    }
+
 
     [_collectionView.mj_header beginRefreshing];
 }

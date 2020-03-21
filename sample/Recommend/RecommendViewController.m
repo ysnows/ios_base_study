@@ -12,6 +12,7 @@
 #import "YUIScreen.h"
 #import "RecommendSectionController.h"
 #import <MJRefresh/MJRefresh.h>
+#import <RDVTabBarController.h>
 
 @interface RecommendViewController ()<IGListAdapterDataSource>
 
@@ -30,9 +31,10 @@
     self = [super init];
     
     if (self) {
-        self.tabBarItem.title=@"推荐";
-        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/like@2x.png"];
-        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
+        self.title=@"推荐";
+//        self.tabBarItem.title=@"推荐";
+//        self.tabBarItem.image=[UIImage imageNamed:@"icon.bundle/like@2x.png"];
+//        self.tabBarItem.selectedImage=[UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
     }
     return self;
 }
@@ -57,6 +59,16 @@
         }];
         _collectionView;
     })];
+
+    if (self.rdv_tabBarController.tabBar.translucent) {
+        UIEdgeInsets insets = UIEdgeInsetsMake(0,
+                                               0,
+                                               CGRectGetHeight(self.rdv_tabBarController.tabBar.frame),
+                                               0);
+        
+        self.collectionView.contentInset = insets;
+        self.collectionView.scrollIndicatorInsets = insets;
+    }
 
 
    #pragma mark - adapter init

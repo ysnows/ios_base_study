@@ -10,6 +10,7 @@
 #import "YUIScreen.h"
 #import "YMediator.h"
 #import "QQLogin.h"
+#import <RDVTabBarController.h>
 
 @interface NewsDetailViewController ()<WKNavigationDelegate,NewsDetailProtocal>
 
@@ -113,6 +114,17 @@
 
 -(void)_shareArticle{
     [[QQLogin sharedInstance]shareArticle:_url];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
 }
 
 @end

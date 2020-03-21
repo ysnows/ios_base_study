@@ -16,6 +16,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "YLocation.h"
 #import "YNotification.h"
+#import "YTabBarViewController.h"
 
 
 
@@ -29,24 +30,13 @@
 
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];
-
-    UITabBarController *tabbarController=[[UITabBarController alloc]init];
-    
-    NewsViewController *controller1=[[NewsViewController alloc]init];
-    VideoViewController *controller2=[[VideoViewController alloc]init];
-    RecommendViewController *controller3=[[RecommendViewController alloc]init];
-    MineViewController *controller4=[[MineViewController alloc]init];
-
-    [tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
-    
-    tabbarController.delegate=self;
-    
-    
-    UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:tabbarController];
-    
-    self.window.rootViewController=navigationController;
     [self.window makeKeyAndVisible];
+
     
+    YTabBarViewController *tabbarController= [[YTabBarViewController alloc]init];
+//    UINavigationController *rootController= [[UINavigationController alloc]initWithRootViewController:tabbarController];
+    self.window.rootViewController=tabbarController;
+
     [self.window addSubview:[[SplashView alloc]initWithFrame:self.window.bounds]];
     
     [[YLocation sharedInstance]checkLocation];
