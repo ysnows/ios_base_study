@@ -35,7 +35,13 @@
     RecommendViewController *thirdVC=[[RecommendViewController alloc]init];
     MineViewController *fourthVC=[[MineViewController alloc]init];
 
-    [self setViewControllers:@[firstVC,secondVC,thirdVC,fourthVC]];
+    [self setViewControllers:@[
+       [[UINavigationController alloc]initWithRootViewController:firstVC],
+       [[UINavigationController alloc]initWithRootViewController:secondVC],
+       [[UINavigationController alloc]initWithRootViewController:thirdVC],
+       [[UINavigationController alloc]initWithRootViewController:fourthVC]
+     ]];
+     
     [self _setImageText];
 }
 
