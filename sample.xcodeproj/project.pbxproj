@@ -22,6 +22,7 @@
 		2C24359D24285A75001279ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24359C24285A75001279ED /* BaseViewController.m */; };
 		2C2435A024285B68001279ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24359F24285B68001279ED /* BaseTableViewController.m */; };
 		2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A224287CD7001279ED /* MasonryremakeView.m */; };
+		2C2435A624288942001279ED /* MasonryConstantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A524288942001279ED /* MasonryConstantsView.m */; };
 		2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C64D23ED135400D906F5 /* AppDelegate.m */; };
 		2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* NewsViewController.m */; };
 		2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65823ED135500D906F5 /* Assets.xcassets */; };
@@ -106,6 +107,8 @@
 		2C24359F24285B68001279ED /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		2C2435A124287CD7001279ED /* MasonryremakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryremakeView.h; sourceTree = "<group>"; };
 		2C2435A224287CD7001279ED /* MasonryremakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryremakeView.m; sourceTree = "<group>"; };
+		2C2435A424288942001279ED /* MasonryConstantsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryConstantsView.h; sourceTree = "<group>"; };
+		2C2435A524288942001279ED /* MasonryConstantsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryConstantsView.m; sourceTree = "<group>"; };
 		2C24C64923ED135400D906F5 /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C24C64C23ED135400D906F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C24C64D23ED135400D906F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -472,6 +475,8 @@
 				2CEBB4FC24264F4E0032B425 /* MasonryBasicView.h */,
 				2C2435A124287CD7001279ED /* MasonryremakeView.h */,
 				2C2435A224287CD7001279ED /* MasonryremakeView.m */,
+				2C2435A424288942001279ED /* MasonryConstantsView.h */,
+				2C2435A524288942001279ED /* MasonryConstantsView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
 			);
 			path = ExampleView;
@@ -670,6 +675,7 @@
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
 				2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */,
 				2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */,
+				2C2435A624288942001279ED /* MasonryConstantsView.m in Sources */,
 				2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */,
 				2CBDA65D241D2FEF009C6D4C /* YUIScreen.m in Sources */,
 				2CEBB4F424264AE90032B425 /* MasonryExampleViewController.m in Sources */,
