@@ -24,6 +24,7 @@
 		2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A224287CD7001279ED /* MasonryremakeView.m */; };
 		2C2435A624288942001279ED /* MasonryConstantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A524288942001279ED /* MasonryConstantsView.m */; };
 		2C2435A924289244001279ED /* MasonrySidesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A824289244001279ED /* MasonrySidesView.m */; };
+		2C2435AC24289B61001279ED /* MasonryAspectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435AB24289B61001279ED /* MasonryAspectView.m */; };
 		2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C64D23ED135400D906F5 /* AppDelegate.m */; };
 		2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* NewsViewController.m */; };
 		2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65823ED135500D906F5 /* Assets.xcassets */; };
@@ -112,6 +113,8 @@
 		2C2435A524288942001279ED /* MasonryConstantsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryConstantsView.m; sourceTree = "<group>"; };
 		2C2435A724289244001279ED /* MasonrySidesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonrySidesView.h; sourceTree = "<group>"; };
 		2C2435A824289244001279ED /* MasonrySidesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonrySidesView.m; sourceTree = "<group>"; };
+		2C2435AA24289B61001279ED /* MasonryAspectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryAspectView.h; sourceTree = "<group>"; };
+		2C2435AB24289B61001279ED /* MasonryAspectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryAspectView.m; sourceTree = "<group>"; };
 		2C24C64923ED135400D906F5 /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C24C64C23ED135400D906F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C24C64D23ED135400D906F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -480,6 +483,8 @@
 				2C2435A224287CD7001279ED /* MasonryremakeView.m */,
 				2C2435A424288942001279ED /* MasonryConstantsView.h */,
 				2C2435A524288942001279ED /* MasonryConstantsView.m */,
+				2C2435AA24289B61001279ED /* MasonryAspectView.h */,
+				2C2435AB24289B61001279ED /* MasonryAspectView.m */,
 				2C2435A724289244001279ED /* MasonrySidesView.h */,
 				2C2435A824289244001279ED /* MasonrySidesView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
@@ -686,6 +691,7 @@
 				2CEBB4F424264AE90032B425 /* MasonryExampleViewController.m in Sources */,
 				2C24C65F23ED135500D906F5 /* main.m in Sources */,
 				2C5B8391241A874600B5102A /* YVideoPlayer.m in Sources */,
+				2C2435AC24289B61001279ED /* MasonryAspectView.m in Sources */,
 				2CBE78432424FE5B00CFC811 /* RecommendSectionController.m in Sources */,
 				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,

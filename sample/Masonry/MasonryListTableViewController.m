@@ -13,6 +13,7 @@
 #import "MasonryremakeView.h"
 #import "MasonryConstantsView.h"
 #import "MasonrySidesView.h"
+#import "MasonryAspectView.h"
 
 
 @interface MasonryListTableViewController ()
@@ -31,7 +32,8 @@
             [[MasonryExampleViewController alloc] initWithTitle:@"BasicView" andClass:[MasonryBasicView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"RemakeView" andClass:[MasonryremakeView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"ConstantsView" andClass:[MasonryConstantsView class]],
-            [[MasonryExampleViewController alloc] initWithTitle:@"SidesView" andClass:[MasonrySidesView class]]
+            [[MasonryExampleViewController alloc] initWithTitle:@"SidesView" andClass:[MasonrySidesView class]],
+            [[MasonryExampleViewController alloc] initWithTitle:@"Aspect" andClass:[MasonryAspectView class]]
         ];
     }
     return self;
