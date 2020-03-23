@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsDetailViewController : UIViewController
+@interface NewsDetailViewController : BaseViewController
 
 - (instancetype)initWithUrl:(NSString *) url;
 @end

@@ -1,8 +1,8 @@
 //
-//  MasonryListTableViewController.h
+//  MasonryremakeView.h
 //  sample
 //
-//  Created by ysnows on 2020/3/21.
+//  Created by ysnows on 2020/3/23.
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MasonryListTableViewController : BaseTableViewController
+@interface MasonryremakeView : UIView
 
 @end
 

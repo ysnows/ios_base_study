@@ -29,17 +29,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view=_viewClass.new;
+    self.view.frame=CGRectMake(0, STATUSBARHEIGHT+40, SCREEN_WIDTH, self.view.frame.size.height);
     self.view.backgroundColor=[UIColor whiteColor];
+    
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#ifdef __IPHONE_7_0
+- (UIRectEdge)edgesForExtendedLayout {
+    return UIRectEdgeNone;
 }
-*/
+#endif
+
+
+
 
 @end

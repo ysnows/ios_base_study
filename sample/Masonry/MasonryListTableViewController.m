@@ -10,6 +10,7 @@
 
 #import "MasonryExampleViewController.h"
 #import "MasonryBasicView.h"
+#import "MasonryremakeView.h"
 
 
 @interface MasonryListTableViewController ()
@@ -25,7 +26,8 @@
     if (self) {
         self.title=@"Examples";
         _exampleControllerArr=@[
-            [[MasonryExampleViewController alloc] initWithTitle:@"BasicView" andClass:[MasonryBasicView class]]
+            [[MasonryExampleViewController alloc] initWithTitle:@"BasicView" andClass:[MasonryBasicView class]],
+            [[MasonryExampleViewController alloc] initWithTitle:@"RemakeView" andClass:[MasonryremakeView class]]
         ];
     }
     return self;

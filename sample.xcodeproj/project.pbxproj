@@ -19,6 +19,9 @@
 		2C23147B242499CE00BEBD57 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C23147A242499CE00BEBD57 /* NotificationCenter.framework */; };
 		2C23147F242499CE00BEBD57 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C23147E242499CE00BEBD57 /* TodayViewController.m */; };
 		2C231486242499CE00BEBD57 /* YToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2C231479242499CE00BEBD57 /* YToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2C24359D24285A75001279ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24359C24285A75001279ED /* BaseViewController.m */; };
+		2C2435A024285B68001279ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24359F24285B68001279ED /* BaseTableViewController.m */; };
+		2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A224287CD7001279ED /* MasonryremakeView.m */; };
 		2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C64D23ED135400D906F5 /* AppDelegate.m */; };
 		2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* NewsViewController.m */; };
 		2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65823ED135500D906F5 /* Assets.xcassets */; };
@@ -97,6 +100,12 @@
 		2C23147E242499CE00BEBD57 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		2C231483242499CE00BEBD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C23148B24249B7500BEBD57 /* YToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YToday.entitlements; sourceTree = "<group>"; };
+		2C24359B24285A75001279ED /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2C24359C24285A75001279ED /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2C24359E24285B68001279ED /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		2C24359F24285B68001279ED /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		2C2435A124287CD7001279ED /* MasonryremakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryremakeView.h; sourceTree = "<group>"; };
+		2C2435A224287CD7001279ED /* MasonryremakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryremakeView.m; sourceTree = "<group>"; };
 		2C24C64923ED135400D906F5 /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C24C64C23ED135400D906F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C24C64D23ED135400D906F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -272,6 +281,17 @@
 			path = YToday;
 			sourceTree = "<group>";
 		};
+		2C24359A24285A57001279ED /* base */ = {
+			isa = PBXGroup;
+			children = (
+				2C24359B24285A75001279ED /* BaseViewController.h */,
+				2C24359C24285A75001279ED /* BaseViewController.m */,
+				2C24359E24285B68001279ED /* BaseTableViewController.h */,
+				2C24359F24285B68001279ED /* BaseTableViewController.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		2C24C64023ED135400D906F5 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +315,7 @@
 		2C24C64B23ED135400D906F5 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				2C24359A24285A57001279ED /* base */,
 				2CEBB4F124264AC60032B425 /* Masonry */,
 				2CBE78542426038B00CFC811 /* Macros */,
 				2C78FBE6242466A4006A7E60 /* AlternateIcons */,
@@ -449,6 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				2CEBB4FC24264F4E0032B425 /* MasonryBasicView.h */,
+				2C2435A124287CD7001279ED /* MasonryremakeView.h */,
+				2C2435A224287CD7001279ED /* MasonryremakeView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
 			);
 			path = ExampleView;
@@ -642,6 +665,7 @@
 				2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */,
 				2CC6A522241F631C007A13CA /* SplashView.m in Sources */,
 				2C78FBE524235B66006A7E60 /* YNotification.m in Sources */,
+				2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
 				2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */,
@@ -656,10 +680,12 @@
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,
 				2CEBB4FE24264F4E0032B425 /* MasonryBasicView.m in Sources */,
 				2C74E61F2420960C00473C98 /* YMediator.m in Sources */,
+				2C24359D24285A75001279ED /* BaseViewController.m in Sources */,
 				2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */,
 				2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */,
 				2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */,
 				2C00351D2424B63D0095D3CF /* YSearchView.m in Sources */,
+				2C2435A024285B68001279ED /* BaseTableViewController.m in Sources */,
 				2C5B838D2419D18D00B5102A /* VideoListLoader.m in Sources */,
 				2CD9373D24234BEF00F90BFF /* YLocation.m in Sources */,
 				2C0035232424BF430095D3CF /* YCommentBar.m in Sources */,

@@ -6,8 +6,16 @@
 //  Copyright © 2020 ysnows. All rights reserved.
 //
 
+#define MAS_SHORTHAND
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "YUIScreen.h"
 #import "Macros/Macro.h"
+#import <Masonry.h>
+#import <RDVTabBarController.h>
+
+
+#import "BaseViewController.h"
+#import "BaseTableViewController.h"
+

@@ -57,12 +57,12 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(_shareArticle)];
     
     [self.view addSubview:({
-        self.webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, STATUSBARHEIGHT+44, self.view.frame.size.width, self.view.frame.size.height-STATUSBARHEIGHT+44)];
+        self.webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         self.webview;
     })];
     
     [self.view addSubview:({
-        self.progressView=[[UIProgressView alloc]initWithFrame:CGRectMake(0, STATUSBARHEIGHT+44, self.view.frame.size.width, 10)];
+        self.progressView=[[UIProgressView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
         self.progressView;
     })];
     
@@ -115,16 +115,6 @@
 -(void)_shareArticle{
     [[QQLogin sharedInstance]shareArticle:_url];
     
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
 }
 
 @end

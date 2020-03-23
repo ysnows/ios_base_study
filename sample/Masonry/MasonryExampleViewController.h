@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MasonryExampleViewController : UIViewController
+@interface MasonryExampleViewController : BaseViewController
 
 - (instancetype)initWithTitle:(NSString*)title andClass:(Class) viewClass;
 
