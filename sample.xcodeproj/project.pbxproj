@@ -23,6 +23,7 @@
 		2C2435A024285B68001279ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24359F24285B68001279ED /* BaseTableViewController.m */; };
 		2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A224287CD7001279ED /* MasonryremakeView.m */; };
 		2C2435A624288942001279ED /* MasonryConstantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A524288942001279ED /* MasonryConstantsView.m */; };
+		2C2435A924289244001279ED /* MasonrySidesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2435A824289244001279ED /* MasonrySidesView.m */; };
 		2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C64D23ED135400D906F5 /* AppDelegate.m */; };
 		2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C65323ED135400D906F5 /* NewsViewController.m */; };
 		2C24C65923ED135500D906F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C65823ED135500D906F5 /* Assets.xcassets */; };
@@ -109,6 +110,8 @@
 		2C2435A224287CD7001279ED /* MasonryremakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryremakeView.m; sourceTree = "<group>"; };
 		2C2435A424288942001279ED /* MasonryConstantsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryConstantsView.h; sourceTree = "<group>"; };
 		2C2435A524288942001279ED /* MasonryConstantsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryConstantsView.m; sourceTree = "<group>"; };
+		2C2435A724289244001279ED /* MasonrySidesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonrySidesView.h; sourceTree = "<group>"; };
+		2C2435A824289244001279ED /* MasonrySidesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonrySidesView.m; sourceTree = "<group>"; };
 		2C24C64923ED135400D906F5 /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C24C64C23ED135400D906F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C24C64D23ED135400D906F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 				2C2435A224287CD7001279ED /* MasonryremakeView.m */,
 				2C2435A424288942001279ED /* MasonryConstantsView.h */,
 				2C2435A524288942001279ED /* MasonryConstantsView.m */,
+				2C2435A724289244001279ED /* MasonrySidesView.h */,
+				2C2435A824289244001279ED /* MasonrySidesView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
 			);
 			path = ExampleView;
@@ -688,6 +693,7 @@
 				2C74E61F2420960C00473C98 /* YMediator.m in Sources */,
 				2C24359D24285A75001279ED /* BaseViewController.m in Sources */,
 				2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */,
+				2C2435A924289244001279ED /* MasonrySidesView.m in Sources */,
 				2C20FFC123F64FD0009EF728 /* DeleteDialog.m in Sources */,
 				2CBDD04E2404D5A400AF1943 /* NewsItem.m in Sources */,
 				2C00351D2424B63D0095D3CF /* YSearchView.m in Sources */,
