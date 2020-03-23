@@ -14,6 +14,7 @@
 #import "MasonryConstantsView.h"
 #import "MasonrySidesView.h"
 #import "MasonryAspectView.h"
+#import "MasonryBasicAnimatedView.h"
 
 
 @interface MasonryListTableViewController ()
@@ -33,7 +34,9 @@
             [[MasonryExampleViewController alloc] initWithTitle:@"RemakeView" andClass:[MasonryremakeView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"ConstantsView" andClass:[MasonryConstantsView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"SidesView" andClass:[MasonrySidesView class]],
-            [[MasonryExampleViewController alloc] initWithTitle:@"Aspect" andClass:[MasonryAspectView class]]
+            [[MasonryExampleViewController alloc] initWithTitle:@"Aspect" andClass:[MasonryAspectView class]],
+            [[MasonryExampleViewController alloc] initWithTitle:@"Basic Animated" andClass:[MasonryBasicAnimatedView class]]
+            
         ];
     }
     return self;
