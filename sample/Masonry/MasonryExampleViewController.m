@@ -36,11 +36,11 @@
 }
 
 
-#ifdef __IPHONE_7_0
-- (UIRectEdge)edgesForExtendedLayout {
-    return UIRectEdgeNone;
-}
-#endif
+//#ifdef __IPHONE_7_0
+//- (UIRectEdge)edgesForExtendedLayout {
+//    return UIRectEdgeNone;
+//}
+//#endif
 
 
 

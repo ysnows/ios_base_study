@@ -47,6 +47,7 @@
 		2CD1F631241892F9006BEFB2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F630241892F9006BEFB2 /* Video.m */; };
 		2CD473D42429C95C00545692 /* MasonryArrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D32429C95C00545692 /* MasonryArrView.m */; };
 		2CD473D72429DADF00545692 /* MasonryMarginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D62429DADF00545692 /* MasonryMarginView.m */; };
+		2CD473DA2429E0F800545692 /* MasonryDistributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D92429E0F800545692 /* MasonryDistributeView.m */; };
 		2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6739E23EE587D000F6ABF /* RecommendViewController.m */; };
 		2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */; };
 		2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A423F1049D000F6ABF /* MineViewController.m */; };
@@ -167,6 +168,8 @@
 		2CD473D32429C95C00545692 /* MasonryArrView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryArrView.m; sourceTree = "<group>"; };
 		2CD473D52429DADF00545692 /* MasonryMarginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryMarginView.h; sourceTree = "<group>"; };
 		2CD473D62429DADF00545692 /* MasonryMarginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryMarginView.m; sourceTree = "<group>"; };
+		2CD473D82429E0F800545692 /* MasonryDistributeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryDistributeView.h; sourceTree = "<group>"; };
+		2CD473D92429E0F800545692 /* MasonryDistributeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryDistributeView.m; sourceTree = "<group>"; };
 		2CD6739D23EE587D000F6ABF /* RecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		2CD6739E23EE587D000F6ABF /* RecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		2CD673A023EE9453000F6ABF /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 				2CD473D32429C95C00545692 /* MasonryArrView.m */,
 				2CD473D52429DADF00545692 /* MasonryMarginView.h */,
 				2CD473D62429DADF00545692 /* MasonryMarginView.m */,
+				2CD473D82429E0F800545692 /* MasonryDistributeView.h */,
+				2CD473D92429E0F800545692 /* MasonryDistributeView.m */,
 				2C2435A724289244001279ED /* MasonrySidesView.h */,
 				2C2435A824289244001279ED /* MasonrySidesView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
@@ -718,6 +723,7 @@
 				2CEBB4FA24264C640032B425 /* MasonryListTableViewController.m in Sources */,
 				2CD93733242254E700F90BFF /* QQLogin.m in Sources */,
 				2CD1F631241892F9006BEFB2 /* Video.m in Sources */,
+				2CD473DA2429E0F800545692 /* MasonryDistributeView.m in Sources */,
 				2C2435AF2428B06B001279ED /* MasonryBasicAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
