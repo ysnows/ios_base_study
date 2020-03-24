@@ -45,6 +45,7 @@
 		2CC6A522241F631C007A13CA /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6A521241F631C007A13CA /* SplashView.m */; };
 		2CD1F62D2418926D006BEFB2 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F62C2418926D006BEFB2 /* VideoListCell.m */; };
 		2CD1F631241892F9006BEFB2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD1F630241892F9006BEFB2 /* Video.m */; };
+		2CD473D42429C95C00545692 /* MasonryArrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D32429C95C00545692 /* MasonryArrView.m */; };
 		2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6739E23EE587D000F6ABF /* RecommendViewController.m */; };
 		2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */; };
 		2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A423F1049D000F6ABF /* MineViewController.m */; };
@@ -161,6 +162,8 @@
 		2CD1F62C2418926D006BEFB2 /* VideoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
 		2CD1F62F241892F9006BEFB2 /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		2CD1F630241892F9006BEFB2 /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		2CD473D22429C95C00545692 /* MasonryArrView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryArrView.h; sourceTree = "<group>"; };
+		2CD473D32429C95C00545692 /* MasonryArrView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryArrView.m; sourceTree = "<group>"; };
 		2CD6739D23EE587D000F6ABF /* RecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		2CD6739E23EE587D000F6ABF /* RecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		2CD673A023EE9453000F6ABF /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
@@ -495,6 +498,8 @@
 				2C2435AE2428B06B001279ED /* MasonryBasicAnimatedView.m */,
 				2CFCE8662429A5F100D7E6A3 /* MasonryScrollView.h */,
 				2CFCE8672429A5F100D7E6A3 /* MasonryScrollView.m */,
+				2CD473D22429C95C00545692 /* MasonryArrView.h */,
+				2CD473D32429C95C00545692 /* MasonryArrView.m */,
 				2C2435A724289244001279ED /* MasonrySidesView.h */,
 				2C2435A824289244001279ED /* MasonrySidesView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
@@ -687,6 +692,7 @@
 				2C2435AC24289B61001279ED /* MasonryAspectView.m in Sources */,
 				2CBE78432424FE5B00CFC811 /* RecommendSectionController.m in Sources */,
 				2CBDA65A241C894A009C6D4C /* VideoToolBar.m in Sources */,
+				2CD473D42429C95C00545692 /* MasonryArrView.m in Sources */,
 				2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */,
 				2CEBB4FE24264F4E0032B425 /* MasonryBasicView.m in Sources */,
 				2C74E61F2420960C00473C98 /* YMediator.m in Sources */,
