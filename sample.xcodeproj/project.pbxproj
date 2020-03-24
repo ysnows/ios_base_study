@@ -48,6 +48,7 @@
 		2CD473D42429C95C00545692 /* MasonryArrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D32429C95C00545692 /* MasonryArrView.m */; };
 		2CD473D72429DADF00545692 /* MasonryMarginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D62429DADF00545692 /* MasonryMarginView.m */; };
 		2CD473DA2429E0F800545692 /* MasonryDistributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473D92429E0F800545692 /* MasonryDistributeView.m */; };
+		2CD473EB242A098400545692 /* HUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD473EA242A098400545692 /* HUDTool.m */; };
 		2CD6739F23EE587D000F6ABF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6739E23EE587D000F6ABF /* RecommendViewController.m */; };
 		2CD673A223EE9453000F6ABF /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A123EE9453000F6ABF /* NewsTableViewCell.m */; };
 		2CD673A523F1049D000F6ABF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD673A423F1049D000F6ABF /* MineViewController.m */; };
@@ -170,6 +171,8 @@
 		2CD473D62429DADF00545692 /* MasonryMarginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryMarginView.m; sourceTree = "<group>"; };
 		2CD473D82429E0F800545692 /* MasonryDistributeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryDistributeView.h; sourceTree = "<group>"; };
 		2CD473D92429E0F800545692 /* MasonryDistributeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryDistributeView.m; sourceTree = "<group>"; };
+		2CD473E9242A098400545692 /* HUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTool.h; sourceTree = "<group>"; };
+		2CD473EA242A098400545692 /* HUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTool.m; sourceTree = "<group>"; };
 		2CD6739D23EE587D000F6ABF /* RecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		2CD6739E23EE587D000F6ABF /* RecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		2CD673A023EE9453000F6ABF /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
@@ -369,6 +372,7 @@
 		2C5B838E241A873600B5102A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2CD473E5242A088500545692 /* HUD */,
 				2C5B838F241A874600B5102A /* YVideoPlayer.h */,
 				2C5B8390241A874600B5102A /* YVideoPlayer.m */,
 				2CBDA65B241D2FEF009C6D4C /* YUIScreen.h */,
@@ -467,6 +471,15 @@
 				2CD1F630241892F9006BEFB2 /* Video.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		2CD473E5242A088500545692 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				2CD473E9242A098400545692 /* HUDTool.h */,
+				2CD473EA242A098400545692 /* HUDTool.m */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		2CD9373424226E3A00F90BFF /* Category */ = {
@@ -687,6 +700,7 @@
 				2CD9373724226EC400F90BFF /* UIImageView+Circle.m in Sources */,
 				2CC6A522241F631C007A13CA /* SplashView.m in Sources */,
 				2C78FBE524235B66006A7E60 /* YNotification.m in Sources */,
+				2CD473EB242A098400545692 /* HUDTool.m in Sources */,
 				2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
 				2CFCE8682429A5F100D7E6A3 /* MasonryScrollView.m in Sources */,

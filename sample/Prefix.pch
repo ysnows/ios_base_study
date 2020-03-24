@@ -7,7 +7,7 @@
 //
 
 #define MAS_SHORTHAND
-
+#define CUSTOM_ERROR_CODE 10000
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "YUIScreen.h"
@@ -25,3 +25,4 @@
 #import "BaseViewController.h"
 #import "BaseTableViewController.h"
 
+#import "HUDTool.h"

@@ -56,6 +56,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 - (void)loginWithSuccessBlock:(LoginSuccessBlock)loginBlock{
     _loginBlock=loginBlock;
     
+    ShowHUD();
+    
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     NSString *accessToken = [userDefault objectForKey:@"access_token"];
     NSString *openId = [userDefault objectForKey:@"open_id"];
@@ -87,11 +89,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
     }else{
         NSLog(@"获取accessToken失败");
+        DismissHud();
     }
 
 }
 
 - (void)tencentDidNotLogin:(BOOL)cancelled{
+    
+    DismissHud();
     if (cancelled) {
         NSLog(@"用户取消");
     }else{
@@ -103,6 +108,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 
 - (void)tencentDidNotNetWork{
+    
+    DismissHud();
     NSLog(@"无网络连接,请设置网络!");
 }
 
@@ -112,6 +119,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelDebug;
         _loginBlock(userInfo,YES);
     }
     
+    DismissHud();
 }
 
 
