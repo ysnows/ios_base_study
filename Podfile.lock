@@ -25,7 +25,6 @@ PODS:
   - MJRefresh (3.3.1)
   - RDVTabBarController (1.2.0)
   - ReactiveObjC (3.0.0)
-  - Reveal-SDK (21)
   - SDWebImage (5.6.1):
     - SDWebImage/Core (= 5.6.1)
   - SDWebImage/Core (5.6.1)
@@ -40,7 +39,6 @@ DEPENDENCIES:
   - MJRefresh
   - RDVTabBarController (~> 1.2.0)
   - ReactiveObjC (~> 3.0.0)
-  - Reveal-SDK (~> 21.0)
   - SDWebImage (~> 5.0)
   - SVProgressHUD
 
@@ -55,7 +53,6 @@ SPEC REPOS:
     - MJRefresh
     - RDVTabBarController
     - ReactiveObjC
-    - Reveal-SDK
     - SDWebImage
     - SVProgressHUD
 
@@ -69,10 +66,9 @@ SPEC CHECKSUMS:
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   RDVTabBarController: b6d63a7fc49b00568ba07255c6171edc737ad833
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  Reveal-SDK: 3523e0eb7c562811c51bb71da6e523a6373702c8
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: b07c1d5fb46fbaa065d33ae2b09309b3ff518fdd
+PODFILE CHECKSUM: c9873b9f80f74f24eb1dfe5dd14a0f5b749b23d4
 
 COCOAPODS: 1.9.1

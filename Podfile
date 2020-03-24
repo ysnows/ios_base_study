@@ -11,7 +11,7 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'CocoaLumberjack'
-pod 'Reveal-SDK', '~> 21.0', :configurations => ['Debug']
+#pod 'Reveal-SDK', '~> 21.0', :configurations => ['Debug']
 pod 'IGListKit', '~> 4.0.0'
 #pod 'Realm', '~> 3.13.0'
 #pod 'YYCategories'

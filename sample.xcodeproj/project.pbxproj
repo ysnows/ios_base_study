@@ -55,6 +55,7 @@
 		2CEBB4F424264AE90032B425 /* MasonryExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4F324264AE90032B425 /* MasonryExampleViewController.m */; };
 		2CEBB4FA24264C640032B425 /* MasonryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4F924264C640032B425 /* MasonryListTableViewController.m */; };
 		2CEBB4FE24264F4E0032B425 /* MasonryBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */; };
+		2CFCE8682429A5F100D7E6A3 /* MasonryScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFCE8672429A5F100D7E6A3 /* MasonryScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,8 @@
 		2CEBB4F924264C640032B425 /* MasonryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryListTableViewController.m; sourceTree = "<group>"; };
 		2CEBB4FC24264F4E0032B425 /* MasonryBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryBasicView.h; sourceTree = "<group>"; };
 		2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryBasicView.m; sourceTree = "<group>"; };
+		2CFCE8662429A5F100D7E6A3 /* MasonryScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryScrollView.h; sourceTree = "<group>"; };
+		2CFCE8672429A5F100D7E6A3 /* MasonryScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryScrollView.m; sourceTree = "<group>"; };
 		7E84C2A4249DFD61C45591BC /* libPods-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -490,6 +493,8 @@
 				2C2435AB24289B61001279ED /* MasonryAspectView.m */,
 				2C2435AD2428B06B001279ED /* MasonryBasicAnimatedView.h */,
 				2C2435AE2428B06B001279ED /* MasonryBasicAnimatedView.m */,
+				2CFCE8662429A5F100D7E6A3 /* MasonryScrollView.h */,
+				2CFCE8672429A5F100D7E6A3 /* MasonryScrollView.m */,
 				2C2435A724289244001279ED /* MasonrySidesView.h */,
 				2C2435A824289244001279ED /* MasonrySidesView.m */,
 				2CEBB4FD24264F4E0032B425 /* MasonryBasicView.m */,
@@ -541,7 +546,6 @@
 				2C24C64623ED135400D906F5 /* Frameworks */,
 				2C24C64723ED135400D906F5 /* Resources */,
 				883B00E0B0AFEF7793F7C78A /* [CP] Copy Pods Resources */,
-				16BDA406B4C0C58242DA5BC7 /* [CP] Embed Pods Frameworks */,
 				2C23148A242499CE00BEBD57 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -611,23 +615,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16BDA406B4C0C58242DA5BC7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sample/Pods-sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sample/Pods-sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sample/Pods-sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		883B00E0B0AFEF7793F7C78A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -687,6 +674,7 @@
 				2C78FBE524235B66006A7E60 /* YNotification.m in Sources */,
 				2C2435A324287CD7001279ED /* MasonryremakeView.m in Sources */,
 				2C14E67A23ED536F005D992D /* VideoViewController.m in Sources */,
+				2CFCE8682429A5F100D7E6A3 /* MasonryScrollView.m in Sources */,
 				2C24C65423ED135400D906F5 /* NewsViewController.m in Sources */,
 				2CD673A823F1173D000F6ABF /* NewsDetailViewController.m in Sources */,
 				2C24C64E23ED135400D906F5 /* AppDelegate.m in Sources */,
