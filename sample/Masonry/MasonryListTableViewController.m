@@ -17,6 +17,7 @@
 #import "MasonryBasicAnimatedView.h"
 #import "MasonryScrollView.h"
 #import "MasonryArrView.h"
+#import "MasonryMarginView.h"
 
 @interface MasonryListTableViewController ()
 @property(nonatomic, strong) NSArray *exampleControllerArr;
@@ -38,7 +39,8 @@
             [[MasonryExampleViewController alloc] initWithTitle:@"Aspect" andClass:[MasonryAspectView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"Basic Animated" andClass:[MasonryBasicAnimatedView class]],
             [[MasonryExampleViewController alloc] initWithTitle:@"ScrollView" andClass:[MasonryScrollView class]],
-            [[MasonryExampleViewController alloc] initWithTitle:@"ArrayView" andClass:[MasonryArrView class]]
+            [[MasonryExampleViewController alloc] initWithTitle:@"ArrayView" andClass:[MasonryArrView class]],
+            [[MasonryExampleViewController alloc] initWithTitle:@"MarginView" andClass:[MasonryMarginView class]]
         ];
     }
     return self;
