@@ -49,15 +49,15 @@
 
 -(void)_setImageText{
 
-    NSArray *tabbarImgs=@[@"home",@"video",@"like",@"page"];
-    NSArray *titles=@[@"首页", @"视频", @"推荐", @"我的"];
+    NSArray *tabbarImgs=@[@"tabbar_home",@"tabbar_activity",@"tabbar_notes",@"tabbar_myCenter"];
+    NSArray *titles=@[@"首页", @"活动", @"游记", @"我的"];
 
     NSInteger index=0;
     for (RDVTabBarItem *item in [self.tabBar items]) {
 
-        UIImage *selectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"icon.bundle/%@_selected@2x.png",[tabbarImgs  objectAtIndex:index]]];
+        UIImage *selectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected.png",[tabbarImgs  objectAtIndex:index]]];
 
-        UIImage *unselectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"icon.bundle/%@@2x.png",[tabbarImgs  objectAtIndex:index]]];
+        UIImage *unselectedImg=[UIImage imageNamed:[NSString stringWithFormat:@"%@_normal.png",[tabbarImgs  objectAtIndex:index]]];
 
         [item setFinishedSelectedImage:selectedImg withFinishedUnselectedImage:unselectedImg];
 
